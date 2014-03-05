@@ -23,4 +23,12 @@ git submodule foreach git submodule update
 ```
 and everything should be OK.
 
+Some of the plugins require their own setup. The pep8 plugin for instance requires a Python library called pep8 
+which can easily be installed, upgraded or uninstalled using the following commands:
+```
+pip install pep8
+pip install --upgrade pep8
+pip uninstall pep8
+```
+
 Your old dotfiles will be backed up in the ~/dotfiles.old directory.
