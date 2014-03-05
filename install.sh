@@ -26,4 +26,12 @@ for file in $files; do
     ln -s $dir/$file ~/$file
 done
 
+# Initialize all submodules
+echo "Symlinking done, initializing vim plugins..."
+
+git submodule init
+git submodule update
+git submodule foreach git submodule init
+git submodule foreach git submodule update
+
 echo "All done!"
