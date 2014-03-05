@@ -1,5 +1,6 @@
 alias ls="ls --color=auto"
 alias grep="grep --color=auto"
+alias egrep="egrep --color=auto"
 
 export PATH=~/bin:/sbin:/usr/local/sbin:/usr/sbin:$PATH
 
