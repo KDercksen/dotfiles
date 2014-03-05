@@ -16,10 +16,12 @@ echo -n "Changing to $dir directory"
 cd $dir
 echo "Completed."
 
-# Move any existing dotfiles in homedir into olddir and create symlinks to new dotfiles
+# Move any existing dotfiles in ~ into olddir and create symlinks to new dotfiles
 for file in $files; do
-    echo "Moving old dotfiles from ~ to $olddir..."
-    mv ~/$file $olddir
+    if [ -f ~/$file ]; then
+        echo "Moving old $file from ~ to $olddir..."
+        mv ~/$file $olddir
+    fi
     echo "Creating symlink to $file in ~ ..."
     ln -s $dir/$file ~/$file
 done
