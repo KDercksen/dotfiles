@@ -1,8 +1,8 @@
 [user]
-	name = KDercksen
-	email = mail@koendercksen.com
+    name = KDercksen
+    email = mail@koendercksen.com
 [credential]
-	helper = cache --timeout=3600
+    helper = cache --timeout=3600
 
 [color]
     diff = auto
