@@ -12,11 +12,6 @@ echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
 mkdir -p $olddir
 echo "Completed."
 
-# Change to dotfiles directory
-echo -n "Changing to $dir directory"
-cd $dir
-echo "Completed."
-
 # Move any existing dotfiles in ~ into olddir and create symlinks to new dotfiles
 for file in $files; do
     if [ -e ~/$file ]; then
