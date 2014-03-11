@@ -18,7 +18,7 @@ echo "Completed."
 
 # Move any existing dotfiles in ~ into olddir and create symlinks to new dotfiles
 for file in $files; do
-    if [ -f ~/$file ]; then
+    if [ -e ~/$file ]; then
         echo "Moving old $file from ~ to $olddir..."
         mv ~/$file $olddir
     fi
