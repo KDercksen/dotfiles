@@ -2,9 +2,10 @@
 
 # Install dotfiles by backing up any old ones and creating symlinks to the ones in this repository
 
-dir=~/dotfiles
+dir=`pwd`
 olddir=~/dotfiles.old
-files=".bashrc .vimrc .vim .bashrc .bash_profile .Xresources .gitconfig"
+# files=".bashrc .vimrc .vim .bashrc .bash_profile .Xresources .gitconfig"
+files=$(ls -1a | grep -xv "\.*\($\|git\(modules\)\+$\)\|README.md\|install.sh")
 
 # First create dotfiles.old in homedir
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
