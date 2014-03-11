@@ -1,25 +1,19 @@
 #!/bin/bash
 
 # Install dotfiles by backing up any old ones and creating symlinks to the ones in this repository
-
-dir=`pwd`
-olddir=~/dotfiles.old
-# files=".bashrc .vimrc .vim .bashrc .bash_profile .Xresources .gitconfig"
-files=$(ls -1a | grep -xv "\.*\($\|git\(modules\)\+$\)\|README.md\|install.sh")
+dir=$(dirname $0)
+olddir=$HOME/dotfiles.old/
 
 # First create dotfiles.old in homedir
-echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
-mkdir -p $olddir
-echo "Completed."
+mkdir -pv $olddir
 
 # Move any existing dotfiles in ~ into olddir and create symlinks to new dotfiles
-for file in $files; do
-    if [ -e ~/$file ]; then
-        echo "Moving old $file from ~ to $olddir..."
-        mv ~/$file $olddir
+for file in $(ls -a1 $dir | grep -xv "\.*\($\|git\(modules\)\+$\)\|README.md\|install.sh")
+do
+    if [ -e $HOME/$file ]; then
+        mv -v $HOME/$file $olddir$file
     fi
-    echo "Creating symlink to $file in ~ ..."
-    ln -s $dir/$file ~/$file
+    ln -sv $dir/$file $HOME/$file
 done
 
 echo "All done!"
