@@ -13,7 +13,7 @@ autocmd! bufwritepost .vimrc source %
 set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 set nocompatible
-set history=1000
+set history=50
 set number
 set ruler
 set backspace=eol,start,indent
