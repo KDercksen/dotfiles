@@ -70,6 +70,9 @@ map <leader>r :RopeRename<CR>
 " map Ack to <leader>a
 nmap <leader>a <Esc>:Ack!
 
+" Sudo write file with capital W
+cmap W w !sudo tee % >/dev/null<CR>
+
 " Add the virtualenv site-packages to vim path
 py << EOF
 import os.path

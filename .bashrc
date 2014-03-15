@@ -8,5 +8,3 @@ if [ -e /usr/games/fortune ] && [ -e /usr/games/cowsay ]; then
     fortune -o | cowsay
     echo " "
 fi
-
-
