@@ -3,6 +3,7 @@ alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 alias c="clear"
 alias sl="sl -e"
+alias gs="git status"
 
 export PATH=~/bin:/sbin:/usr/local/sbin:/usr/sbin:$PATH
 
