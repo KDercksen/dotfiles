@@ -1,6 +1,6 @@
 filetype off
-call pathogen#incubate()
-call pathogen#helptags()
+execute pathogen#infect()
+execute pathogen#helptags()
 
 filetype on
 filetype indent plugin on
