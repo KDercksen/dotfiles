@@ -34,10 +34,9 @@ au BufNewFile,BufRead *.tex let @a=':w:!latex % && latex % && latex % && dvipd
 au BufNewFile,BufRead *.cpp let @a=':w:!g++ % -o %:r -Wall && chmod +x %:r && ./%:r' 
 au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType="context"
-let g:SuperTabMappingTabLiteral='<C-Tab>'
+set completeopt=menuone,longest,preview
 let g:pyflakes_use_quickfix = 0
 let g:pep8_map = '<leader>8'
-set completeopt=menuone,longest,preview
 
 " Change leader key to be ,
 let mapleader=","
