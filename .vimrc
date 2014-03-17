@@ -43,10 +43,10 @@ let mapleader=","
 nnoremap <leader>v <Plug>TaskList
 
 " Change Snipmate trigger to ctrl+space
-imap <c-space> <Plug>snipMateNextOrTrigger
-smap <c-space> <Plug>snipMateNextOrTrigger
-imap <c-s-space> <Plug>snipMateBack
-smap <c-s-space> <Plug>snipMateBack
+imap <leader><space> <Plug>snipMateNextOrTrigger
+smap <leader><space> <Plug>snipMateNextOrTrigger
+imap <leader><s-space> <Plug>snipMateBack
+smap <leader><s-space> <Plug>snipMateBack
 
 " Remap Alt+J and Alt+K to move lines down/up in normal mode
 nnoremap k mz:m-2<CR>`z==
