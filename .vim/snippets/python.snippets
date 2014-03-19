@@ -8,6 +8,22 @@ snippet ifmain
 	if __name__ == "__main__":
 		${0:main()}
 snippet "
+	"""	${0:doc}
 	"""
-	${0:doc}
-	"""
+snippet for
+	for ${1:cond}:
+		${0}
+snippet class
+	class ${1:name}:
+
+		def __init__(self${2:, args}):
+			${0}
+snippet if
+	if ${1:cond}:
+		${0}
+snippet while
+	while ${1:cond}:
+		${0}
+snippet def
+	def ${1:name}(${2:args}):
+		${0}
