@@ -20,3 +20,7 @@ function run(){
         $@
     done
 }
+
+function getlink(){
+    pastebinit -i $1 -b http://pastebin.com | xclip -selection clipboard
+}
