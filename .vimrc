@@ -96,3 +96,8 @@ for prefix in ['i', 'n', 'v']
         exe prefix . "noremap " . key . " <Nop>"
     endfor
 endfor
+
+" Make sure the gui font is set to Lucida Console
+if has ('gui_running')
+    set guifont=Lucida_Console:h10
+endif
