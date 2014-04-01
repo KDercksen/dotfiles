@@ -29,6 +29,8 @@ set softtabstop=4
 set expandtab
 set autochdir
 set clipboard=unnamed
+set cc=80
+set mouse=""
 
 au BufNewFile,BufRead *.tex let @a=':w:!latex % && latex % && latex % && dvipdfm %:r.dvi && evince %:r.pdf'
 au BufNewFile,BufRead *.cpp let @a=':w:!g++ % -o %:r -Wall && chmod +x %:r && ./%:r' 
