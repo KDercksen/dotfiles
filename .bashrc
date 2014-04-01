@@ -12,6 +12,12 @@ if [ -e /usr/games/fortune ] && [ -e /usr/games/cowsay ]; then
     echo " "
 fi
 
+# Set the title of X terminals
+if [[ $TERM =~ "xterm|*rxvt*" ]]; then
+    # set -o functrace
+    trap 'set_title' DEBUG
+fi
+
 # Function to run a certain command multiple times
 function run(){
     number=$1
