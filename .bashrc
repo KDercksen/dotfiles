@@ -30,3 +30,7 @@ function run(){
 function getlink(){
     pastebinit -i $1 -b http://pastebin.com | xclip -selection clipboard
 }
+
+function openpdf(){
+    evince $1 & disown
+}
