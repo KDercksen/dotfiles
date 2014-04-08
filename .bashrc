@@ -7,11 +7,6 @@ alias gs="git status"
 
 export PATH=~/bin:/sbin:/usr/local/sbin:/usr/sbin:$PATH
 
-if [ -e /usr/games/fortune ] && [ -e /usr/games/cowsay ]; then
-    fortune -o | cowsay
-    echo " "
-fi
-
 # Set the title of X terminals
 if [[ $TERM =~ "xterm|*rxvt*" ]]; then
     # set -o functrace
