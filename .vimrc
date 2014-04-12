@@ -37,14 +37,13 @@ au BufNewFile,BufRead *.cpp let @a=':w:!g++ % -o %:r -Wall && chmod +x %:r && 
 au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType="context"
 set completeopt=menuone,longest,preview
-let g:pyflakes_use_quickfix = 0
 let g:pep8_map = '<leader>8'
 
 " Change leader key to be ,
 let mapleader=","
 nnoremap <leader>v <Plug>TaskList
 
-" Change Snipmate trigger to ctrl+space
+" Change Snipmate trigger to
 imap <leader>[ <Plug>snipMateNextOrTrigger
 smap <leader>[ <Plug>snipMateNextOrTrigger
 imap <leader>{ <Plug>snipMateBack
