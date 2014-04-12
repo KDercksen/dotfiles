@@ -30,5 +30,9 @@ pip install pep8
 pip install --upgrade pep8
 pip uninstall pep8
 ```
+I changed my autocompletion plugin to jedi-vim, which uses the ```jedi``` Python library. Get it by running
+```
+pip install jedi
+```
 
 Your old dotfiles will be backed up in the ~/dotfiles.old directory.
