@@ -35,8 +35,8 @@ set noswapfile
 
 au BufNewFile,BufRead *.tex let @a=':w:!latex % && latex % && latex % && dvipdfm %:r.dvi && evince %:r.pdf'
 au BufNewFile,BufRead *.cpp let @a=':w:!g++ % -o %:r -Wall && chmod +x %:r && ./%:r' 
-au FileType python set omnifunc=pythoncomplete#Complete
 let g:SuperTabDefaultCompletionType="context"
+let g:jedi#popup_on_dot = 0
 set completeopt=menuone,longest,preview
 let g:pep8_map = '<leader>8'
 
