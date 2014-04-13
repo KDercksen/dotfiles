@@ -51,8 +51,8 @@ imap <leader>{ <Plug>snipMateBack
 smap <leader>{ <Plug>snipMateBack
 
 " Remap Alt+J and Alt+K to move lines down/up in normal mode
-nnoremap k mz:m-2<CR>`z==
-nnoremap j mz:m+<CR>`z==
+nnoremap <A-k> ddkP
+nnoremap <A-j> ddp
 
 " Map Ctrl+movement keys to move around windows
 map <C-j> <C-w>j
