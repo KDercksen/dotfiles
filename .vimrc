@@ -70,25 +70,6 @@ vnoremap > >gv
 " map NERDTree to <leader>n
 map <leader>n :NERDTreeToggle<CR>
 
-" map keys for refactoring and goto definition
-map <leader>j :RopeGotoDefinition<CR>
-map <leader>r :RopeRename<CR>
-
-" map Ack to <leader>a
-nmap <leader>a <Esc>:Ack!
-
-" Add the virtualenv site-packages to vim path
-py << EOF
-import os.path
-import sys
-import vim
-if 'VIRTUAL_ENV' in os.environ:
-    project_base_dir = os.environ['VIRTUAL_ENV']
-    sys.path.insert(0, project_base_dir)
-    active_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-    execfile(activate_this, dict(__file__=activate_this))
-EOF
-
 " Unmap arrow keys
 for prefix in ['i', 'n', 'v']
     for key in ['<Up>', '<Down>', '<Left>', '<Right>']
@@ -100,3 +81,15 @@ endfor
 if has ('gui_running')
     set guifont=Lucida_Console:h10
 endif
+
+" Virtualenv fix
+py3 << EOF
+import os.path
+import sys
+import vim
+if 'VIRTUAL_ENV' in os.environ:
+    project_base_dir = os.environ['VIRTUAL_ENV']
+    sys.path.insert(0, project_base_dir)
+    activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+    execfile(activate_this, dict(__file__=activate_this))
+EOF
