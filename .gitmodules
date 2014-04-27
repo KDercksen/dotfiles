@@ -7,8 +7,8 @@
 [submodule ".vim/bundle/supertab"]
 	path = .vim/bundle/supertab
 	url = https://github.com/ervandew/supertab.git
-[submodule ".vim/bundle/minibufexpl"]
-	path = .vim/bundle/minibufexpl
+[submodule ".vim/bundle/minibufexpl.vim"]
+	path = .vim/bundle/minibufexpl.vim
 	url = https://github.com/fholgado/minibufexpl.vim.git
 [submodule ".vim/bundle/pydoc"]
 	path = .vim/bundle/pydoc
