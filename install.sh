@@ -2,7 +2,7 @@
 
 set -e
 
-FILES=".bashrc .gitconfig .muttrc .vimrc .vim"
+FILES=".bashrc .gitconfig .vimrc .vim"
 BACKUPDIR="$HOME/dotfiles.old"
 
 mkdir -pv $BACKUPDIR
