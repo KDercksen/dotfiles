@@ -4,7 +4,6 @@ alias egrep="egrep --color=auto"
 alias c="clear"
 alias sl="sl -e"
 alias gs="git status"
-alias vim2="/usr/local/bin/py2vim/bin/vim"
 
 export PATH=~/bin:/sbin:/usr/local/sbin:/usr/sbin:$PATH
 
