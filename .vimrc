@@ -34,9 +34,6 @@ set mouse=""
 set noswapfile
 set t_Co=16
 
-" Set colour of highlight done by cc=80
-hi ColorColumn ctermbg=darkcyan
-
 au BufNewFile,BufRead *.tex let @a=':w:!latex % && latex % && latex % && dvipdfm %:r.dvi && evince %:r.pdf'
 au BufNewFile,BufRead *.cpp let @a=':w:!g++ % -o %:r -Wall && chmod +x %:r && ./%:r' 
 let g:SuperTabDefaultCompletionType="context"
