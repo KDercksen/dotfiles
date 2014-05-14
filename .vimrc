@@ -32,6 +32,7 @@ set clipboard=unnamed
 set cc=79
 set mouse=""
 set noswapfile
+set t_Co=16
 
 " Set colour of highlight done by cc=80
 hi ColorColumn ctermbg=darkcyan
