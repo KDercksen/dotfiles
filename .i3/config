@@ -23,6 +23,14 @@ font pango:DejaVu Sans Mono 10
 # Lock the screen by pressing ctrl+mod+l
 bindsym $mod+Control+l exec lock
 
+# Open browser by pressing mod+z
+bindsym $mod+z exec chromium
+
+# Bind volume keys
+bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute
+bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- unmute
+bindsym XF86AudioMute exec amixer -q set Master toggle
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
