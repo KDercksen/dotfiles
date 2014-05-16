@@ -5,6 +5,8 @@ alias c="clear"
 alias sl="sl -e"
 alias gs="git status"
 
+export TERMINAL=urxvt
+export BROWSER=chromium
 export PATH=~/bin:/sbin:/usr/local/sbin:/usr/sbin:$PATH
 
 # Set the title of X terminals

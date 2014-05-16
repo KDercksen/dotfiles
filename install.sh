@@ -2,7 +2,7 @@
 
 set -e
 
-FILES=".bashrc .gitconfig .vimrc .vim"
+FILES=".bashrc .gitconfig .vimrc .vim .i3 .Xresources"
 BACKUPDIR="$HOME/dotfiles.old"
 
 mkdir -pv $BACKUPDIR
