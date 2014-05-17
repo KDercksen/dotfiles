@@ -31,3 +31,11 @@ function getlink(){
 function openpdf(){
     evince $1 & disown
 }
+
+function cyanide(){
+    display "$(wget -q http://explosm.net/comics/random/ -O - | grep -Po 'http://www.explosm.net/db/files/Comics/*/[^"]+(png|jpg|jpeg)')";
+}
+
+function py34(){
+    source virtualenvs/py34/bin/activate
+}

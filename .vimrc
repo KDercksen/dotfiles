@@ -40,6 +40,7 @@ let g:SuperTabDefaultCompletionType="context"
 let g:jedi#popup_on_dot = 0
 set completeopt=menuone,longest,preview
 let g:pep8_map = '<leader>8'
+let g:syntastic_python_checkers = ['flake8', 'pep8', 'pyflakes']
 
 " Change leader key to be ,
 let mapleader=","
