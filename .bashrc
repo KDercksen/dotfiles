@@ -7,7 +7,7 @@ alias gs="git status"
 
 export TERMINAL=urxvt
 export BROWSER=chromium
-export PATH=~/bin:/sbin:/usr/local/sbin:/usr/sbin:$PATH
+export PATH=~/bin:/sbin:/usr/local/go/bin:/usr/local/sbin:/usr/sbin:$PATH
 
 # Set the title of X terminals
 if [[ $TERM =~ "xterm|*rxvt*" ]]; then
