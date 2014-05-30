@@ -10,7 +10,6 @@ set background=dark
 colorscheme solarized
 
 autocmd! bufwritepost .vimrc source %
-" set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 set nocompatible
 set history=50
