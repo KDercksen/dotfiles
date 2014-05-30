@@ -10,7 +10,7 @@ set background=dark
 colorscheme solarized
 
 autocmd! bufwritepost .vimrc source %
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+" set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 set nocompatible
 set history=50
@@ -40,7 +40,6 @@ let g:SuperTabDefaultCompletionType="context"
 let g:jedi#popup_on_dot = 0
 set completeopt=menuone,longest,preview
 let g:pep8_map = '<leader>8'
-let g:syntastic_python_checkers = ['flake8', 'pep8', 'pyflakes']
 
 " Change leader key to be ,
 let mapleader=","
@@ -51,10 +50,6 @@ imap <leader>[ <Plug>snipMateNextOrTrigger
 smap <leader>[ <Plug>snipMateNextOrTrigger
 imap <leader>{ <Plug>snipMateBack
 smap <leader>{ <Plug>snipMateBack
-
-" Remap Alt+J and Alt+K to move lines down/up in normal mode
-nnoremap <A-k> ddkP
-nnoremap <A-j> ddp
 
 " Map Ctrl+movement keys to move around windows
 map <C-j> <C-w>j
