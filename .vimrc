@@ -11,6 +11,7 @@ colorscheme solarized
 
 autocmd! bufwritepost .vimrc source %
 
+set laststatus=2
 set statusline=
 set statusline+=%t  " tail of filename
 set statusline+=[%{strlen(&fenc)?&fenc:'none'}, " file encoding
