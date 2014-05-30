@@ -11,6 +11,17 @@ colorscheme solarized
 
 autocmd! bufwritepost .vimrc source %
 
+set statusline=
+set statusline+=%t  " tail of filename
+set statusline+=[%{strlen(&fenc)?&fenc:'none'}, " file encoding
+set statusline+=%{&ff}] " file format
+set statusline+=%m " modified flag
+set statusline+=%y " filetype
+set statusline+=%{fugitive#statusline()}
+set statusline+=%= " left right sep
+set statusline+=%c, "cursor col
+set statusline+=%l/%L " cursor line/total lines
+set statusline+=\ %P " percent through file
 set nocompatible
 set history=50
 set number
@@ -31,14 +42,13 @@ set clipboard=unnamed
 set cc=79
 set mouse=""
 set noswapfile
-set t_Co=16
+set t_Co=256
 
-au BufNewFile,BufRead *.tex let @a=':w:!latex % && latex % && latex % && dvipdfm %:r.dvi && evince %:r.pdf'
-au BufNewFile,BufRead *.cpp let @a=':w:!g++ % -o %:r -Wall && chmod +x %:r && ./%:r' 
 let g:SuperTabDefaultCompletionType="context"
 let g:jedi#popup_on_dot = 0
 set completeopt=menuone,longest,preview
 let g:pep8_map = '<leader>8'
+let g:ctrlp_match_window="bottom,order:btt,min:10,max:10"
 
 " Change leader key to be ,
 let mapleader=","
