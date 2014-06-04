@@ -45,6 +45,10 @@ set mouse=""
 set noswapfile
 set t_Co=256
 
+" Add ruby/html 2 space indent
+autocmd Filetype html setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd Filetype ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
+
 let g:SuperTabDefaultCompletionType="context"
 let g:jedi#popup_on_dot = 0
 set completeopt=menuone,longest,preview
