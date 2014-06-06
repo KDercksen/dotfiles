@@ -3,6 +3,9 @@ alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 alias c="clear"
 alias gs="git status"
+alias gp="git push"
+alias gpl="git pull"
+alias gc="git clone"
 alias tag="ctags -R -f .git/tags ."
 
 export TERMINAL=urxvt
