@@ -2,8 +2,8 @@ alias ls="ls --color=auto"
 alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 alias c="clear"
-alias sl="sl -e"
 alias gs="git status"
+alias tag="ctags -R -f .git/tags ."
 
 export TERMINAL=urxvt
 export BROWSER=chromium
