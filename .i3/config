@@ -13,6 +13,7 @@ set $mod Mod1
 
 # Execute autolocker script
 exec /etc/init.d/idle-lock
+exec dropbox start
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
