@@ -40,7 +40,7 @@ set softtabstop=4
 set expandtab
 set autochdir
 set clipboard=unnamed
-set cc=79
+set cc=80
 set mouse=""
 set noswapfile
 set t_Co=256

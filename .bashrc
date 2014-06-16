@@ -8,6 +8,7 @@ alias gpl="git pull"
 alias gc="git clone"
 alias tag="ctags -R -f .git/tags ."
 
+export EDITOR=vim
 export TERMINAL=urxvt
 export BROWSER=chromium
 export GOPATH=$HOME/.go
