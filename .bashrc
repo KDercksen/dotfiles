@@ -45,3 +45,5 @@ function cyanide(){
 function py34(){
     source /home/koen/virtualenvs/py34/bin/activate
 }
+
+py34
