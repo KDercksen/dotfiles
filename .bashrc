@@ -7,7 +7,7 @@ alias gp="git push"
 alias gpl="git pull"
 alias gc="git clone"
 alias tag="ctags -R -f .git/tags ."
-alias fuck="sudo !!"
+alias fuck='sudo $(history -p \!\!)'
 
 export EDITOR=vim
 export TERMINAL=urxvt
