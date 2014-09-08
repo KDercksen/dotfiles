@@ -7,6 +7,7 @@ alias gp="git push"
 alias gpl="git pull"
 alias gc="git clone"
 alias tag="ctags -R -f .git/tags ."
+alias fuck="sudo !!"
 
 export EDITOR=vim
 export TERMINAL=urxvt
