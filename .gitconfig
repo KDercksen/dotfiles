@@ -11,5 +11,3 @@
     interactive = auto
     ui = true
     pager = true
-[push]
-	default = simple
