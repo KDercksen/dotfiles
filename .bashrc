@@ -7,6 +7,8 @@ alias gp="git push"
 alias gpl="git pull"
 alias gc="git clone"
 alias tag="ctags -R -f .git/tags ."
+alias update="sudo apt-get update"
+alias upgrade="sudo apt-get upgrade"
 
 export EDITOR=vim
 export TERMINAL=urxvt
