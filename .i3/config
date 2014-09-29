@@ -28,7 +28,7 @@ font pango:DejaVu Sans Mono 10
 bindsym $mod+Control+l exec lock
 
 # Open browser by pressing mod+z
-bindsym $mod+z exec chromium
+bindsym $mod+z exec google-chrome
 
 # Bind volume keys
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute
