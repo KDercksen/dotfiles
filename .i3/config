@@ -36,6 +36,8 @@ bindsym $mod+z exec google-chrome
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q set Master 5%- unmute
 bindsym XF86AudioMute exec amixer -q set Master toggle
+bindsym XF86Mail exec xbacklight -dec 10
+bindsym XF86WWW exec xbacklight -inc 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
