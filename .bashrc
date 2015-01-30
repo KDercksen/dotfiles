@@ -10,6 +10,7 @@ alias tag="ctags -R -f .git/tags ."
 alias update="sudo apt-get update"
 alias upgrade="sudo apt-get upgrade"
 alias fuck='sudo $(history -p \!\!)'
+alias gvd='echo Margo houd je bek'
 
 export EDITOR=vim
 export TERMINAL=urxvt
