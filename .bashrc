@@ -50,7 +50,6 @@ function py34(){
     source /home/koen/virtualenvs/py34/bin/activate
 }
 
-py34
 synclient TapButton1=1
 synclient TapButton2=2
 synclient TapButton3=3
