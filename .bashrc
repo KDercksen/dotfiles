@@ -50,6 +50,27 @@ function py34(){
     source /home/koen/virtualenvs/py34/bin/activate
 }
 
+function extract() {
+    if [ -f $1 ]; then
+        case $1 in
+            *.tar.bz2) tar xvjf $1 ;;
+            *.tar.gz) tar xvzf $1 ;;
+            *.bz2) bunzip x $1 ;;
+            *.rar) unrar x $1 ;;
+            *.gz) tar xvf $1 ;;
+            *.tbz2) tar xvjf $1 ;;
+            *.tgz) tar xvzf $1 ;;
+            *.zip) unzip $1 ;;
+            *.Z) uncompress $1 ;;
+            *.7z) 7z x $1 ;;
+            *) echo "'$1' cannot be extracted via >extract<" ;;
+        esac
+    else
+        echo "'$1' is not a valid file!"
+    fi
+}
+}
+
 synclient TapButton1=1
 synclient TapButton2=2
 synclient TapButton3=3
