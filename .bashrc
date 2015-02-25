@@ -69,7 +69,6 @@ function extract() {
         echo "'$1' is not a valid file!"
     fi
 }
-}
 
 synclient TapButton1=1
 synclient TapButton2=2
