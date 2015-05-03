@@ -12,9 +12,8 @@
 set $mod Mod1
 
 # Execute autolocker script
-exec /etc/init.d/idle-lock
+exec xautolock -locker i3lock -time 3
 exec xrdb ~/.Xresources
-exec --no-startup-id feh --bg-scale ~/Pictures/blue_stripes.png
 exec dropbox start
 exec xcompmgr -c
 

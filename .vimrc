@@ -50,6 +50,7 @@ autocmd Filetype html setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd Filetype ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 let g:SuperTabDefaultCompletionType="context"
+let g:syntastic_python_checkers = ['flake8']
 let g:jedi#popup_on_dot = 0
 set completeopt=menuone,longest,preview
 let g:pep8_map = '<leader>8'
