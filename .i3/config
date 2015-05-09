@@ -9,10 +9,10 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
+set $mod Mod4
 
 # Execute autolocker script
-exec xautolock -locker i3lock -time 3
+exec xautolock -locker i3lock -time 15
 exec xrdb ~/.Xresources
 exec dropbox start
 exec xcompmgr -c
