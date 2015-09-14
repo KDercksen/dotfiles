@@ -13,9 +13,12 @@ set $mod Mod4
 
 # Execute autolocker script
 exec xautolock -locker i3lock -time 15
-exec xrdb ~/.Xresources
 exec dropbox start
 exec xcompmgr -c
+exec feh --bg-scale /home/koen/pics/wallpaper.jpg
+exec synclient TapButton1=1
+exec synclient TapButton2=2
+exec synclient TapButton3=3
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
@@ -27,7 +30,7 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 font pango:DejaVu Sans Mono 10
 
 # Lock the screen by pressing ctrl+mod+l
-bindsym $mod+Control+l exec lock
+bindsym $mod+Control+l exec xautolock -locknow
 
 # Open browser by pressing mod+z
 bindsym $mod+z exec google-chrome
@@ -43,7 +46,7 @@ bindsym XF86WWW exec xbacklight -inc 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvtcd
+bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill

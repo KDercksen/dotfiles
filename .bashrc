@@ -19,6 +19,8 @@ export BROWSER=google-chrome
 export GOPATH=$HOME/.go
 export GOROOT=/usr/local/go
 export PATH=$GOPATH/bin:$GOROOT/bin:~/bin:/sbin:/usr/local/sbin:/usr/sbin:$PATH
+export WORKON_HOME=/home/koen/venvs
+export PROJECT_HOME=/home/koen/projects
 
 # Set the title of X terminals
 if [[ $TERM =~ "xterm|*rxvt*" ]]; then
@@ -71,7 +73,4 @@ function extract() {
     fi
 }
 
-synclient TapButton1=1
-synclient TapButton2=2
-synclient TapButton3=3
-eval `keychain --quiet --eval --agents ssh ~/.ssh/github ~/.ssh/msdt_new ~/.ssh/rpi`
+eval `keychain --quiet --eval --agents ssh ~/.ssh/github ~/.ssh/msdt_new`
