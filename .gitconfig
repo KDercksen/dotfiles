@@ -11,12 +11,14 @@
     interactive = auto
     ui = true
     pager = true
+
 [push]
 	default = simple
 
 [core]
     packedGitLimit = 128m
     packedGitWindowSize = 128m
+    fileMode = off
 
 [pack]
     deltaCacheSize = 128m
