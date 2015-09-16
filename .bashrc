@@ -49,10 +49,6 @@ function cyanide(){
     display "$(wget -q http://explosm.net/comics/random/ -O - | grep -Po 'http://www.explosm.net/db/files/Comics/*/[^"]+(png|jpg|jpeg)')";
 }
 
-function py34(){
-    source /home/koen/virtualenvs/py34/bin/activate
-}
-
 function extract() {
     if [ -f $1 ]; then
         case $1 in
@@ -73,4 +69,4 @@ function extract() {
     fi
 }
 
-eval `keychain --quiet --eval --agents ssh ~/.ssh/github ~/.ssh/msdt_new`
+eval `keychain --quiet --eval --agents ssh ~/.ssh/github`
