@@ -2,7 +2,7 @@
 
 set -e
 
-FILES=".tmux.conf .bashrc .gitconfig .vimrc .vim .i3 .Xresources"
+FILES=".xinitrc .tmux.conf .bashrc .gitconfig .vimrc .vim .i3 .Xresources"
 BACKUPDIR="$HOME/dotfiles.old"
 
 mkdir -pv $BACKUPDIR
