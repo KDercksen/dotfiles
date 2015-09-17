@@ -69,4 +69,5 @@ function extract() {
     fi
 }
 
-eval `keychain --quiet --eval --agents ssh ~/.ssh/github`
+eval $(keychain --quiet --eval --agents ssh ~/.ssh/github)
+eval $(gpg-agent --daemon)
