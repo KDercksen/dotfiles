@@ -34,7 +34,10 @@ bindsym $mod+Control+l exec xautolock -locknow
 bindsym $mod+z exec google-chrome
 
 # Make screenshot with prtscr button
-bindsym --release Print exec --no-startup-id ~/bin/scr
+bindsym --release Print exec --no-startup-id scr
+
+# Bind mod+p to passmenu
+bindsym $mod+p exec passmenu
 
 # Bind volume keys
 # bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute
