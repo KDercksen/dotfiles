@@ -5,9 +5,9 @@ execute pathogen#helptags()
 filetype on
 filetype indent plugin on
 syntax enable
-hi Normal ctermbg=NONE
 set background=dark
 colorscheme solarized
+"hi Normal ctermbg=NONE
 
 autocmd! bufwritepost .vimrc source %
 
@@ -55,6 +55,7 @@ let g:jedi#popup_on_dot = 0
 set completeopt=menuone,longest,preview
 let g:pep8_map = '<leader>8'
 let g:ctrlp_match_window="bottom,order:btt,min:10,max:10"
+let g:solarized_termtrans=1
 
 " Change leader key to be ,
 let mapleader=","
