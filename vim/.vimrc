@@ -2,6 +2,10 @@ filetype off
 execute pathogen#infect()
 execute pathogen#helptags()
 
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+
 filetype on
 filetype indent plugin on
 syntax enable
@@ -12,17 +16,6 @@ colorscheme solarized
 autocmd! bufwritepost .vimrc source %
 
 set laststatus=2
-set statusline=
-set statusline+=%t  " tail of filename
-set statusline+=[%{strlen(&fenc)?&fenc:'none'}, " file encoding
-set statusline+=%{&ff}] " file format
-set statusline+=%m " modified flag
-set statusline+=%y " filetype
-set statusline+=%{fugitive#statusline()}
-set statusline+=%= " left right sep
-set statusline+=%c, "cursor col
-set statusline+=%l/%L " cursor line/total lines
-set statusline+=\ %P " percent through file
 set nocompatible
 set history=50
 set number

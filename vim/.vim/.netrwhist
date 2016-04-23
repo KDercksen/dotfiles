@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/koen/.config'
+let g:netrw_dirhist_2='/home/koen/.config/pulse'
+let g:netrw_dirhist_3='/usr/share/doc/pass/examples/dmenu'
+let g:netrw_dirhist_4='/usr/share/doc'
+let g:netrw_dirhist_5='/usr/share/doc/pass'
+let g:netrw_dirhist_6='/home/koen/dotfiles/.vim'
+let g:netrw_dirhist_7='/home/koen/dotfiles/i3/.i3'
+let g:netrw_dirhist_8='/home/koen/dotfiles/powerline/powerline'
