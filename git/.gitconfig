@@ -1,6 +1,8 @@
 [user]
     name = KDercksen
     email = mail@koendercksen.com
+    signingkey = 3DD29C85
+
 [credential]
     helper = cache --timeout=86400
 

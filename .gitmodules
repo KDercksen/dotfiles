@@ -31,3 +31,6 @@
 [submodule "vim/.vim/bundle/tlib_vim"]
 	path = vim/.vim/bundle/tlib_vim
 	url = git@github:tomtom/tlib_vim
+[submodule "vim/.vim/bundle/editorconfig-vim"]
+	path = vim/.vim/bundle/editorconfig-vim
+	url = git@github:editorconfig/editorconfig-vim

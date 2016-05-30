@@ -4,7 +4,7 @@ alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias c="clear"
-alias tag="ctags -R -f .git/tags ."
+alias tag="ctags -R ."
 alias update="sudo apt-get update"
 alias upgrade="sudo apt-get upgrade"
 alias fuck='sudo $(history -p \!\!)'
