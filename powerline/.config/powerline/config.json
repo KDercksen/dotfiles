@@ -22,6 +22,10 @@
 				"quickfix": "quickfix"
 			}
 		},
+        "tmux": {
+            "colorscheme": "solarized",
+            "theme": "default"
+        },
 		"wm": {
 			"colorscheme": "default",
 			"theme": "default"

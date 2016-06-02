@@ -45,6 +45,8 @@ let g:jedi#popup_on_dot = 0
 set completeopt=menuone,longest,preview
 let g:pep8_map = '<leader>8'
 let g:ctrlp_match_window="bottom,order:btt,min:10,max:10"
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_show_hidden = 1
 let g:solarized_termtrans=1
 
 " Change leader key to be ,
