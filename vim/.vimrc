@@ -11,7 +11,8 @@ filetype indent plugin on
 syntax enable
 set background=dark
 colorscheme solarized
-"hi Normal ctermbg=NONE
+hi Normal ctermbg=NONE
+hi SpecialKey ctermbg=NONE
 
 autocmd! bufwritepost .vimrc source %
 
