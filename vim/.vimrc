@@ -38,6 +38,8 @@ set mouse=""
 set noswapfile
 set t_Co=256
 set tags=./tags;,tags;
+set listchars=tab:▶\ ,trail:·,extends:»,precedes:«
+set list
 
 let g:SuperTabDefaultCompletionType="context"
 let g:syntastic_python_checkers = ['flake8']

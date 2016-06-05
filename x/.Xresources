@@ -18,11 +18,10 @@ Xft.hintstyle:              hintslight
 URxvt.depth:                32
 URxvt.geometry:             90x30
 URxvt.transparent:          false
-URxvt.fading:               80
 ! URxvt.urgentOnBell:         true
 ! URxvt.visualBell:           true
 URxvt.loginShell:           true
-URxvt.saveLines:            500 
+URxvt.saveLines:            500
 URxvt.internalBorder:       3
 URxvt.lineSpace:            0
 URxvt.intensityStyles:      false
@@ -58,8 +57,6 @@ URxvt.pointerBlank:         true
 #define trans_bg rgba:0000/2b00/3600/cc00
 URxvt*background: trans_bg
 *foreground: #657b83
-!!*fading: 40
-*fadeColor: #002b36
 *cursorColor: #93a1a1
 *pointerColorBackground: #586e75
 *pointerColorForeground: #93a1a1
