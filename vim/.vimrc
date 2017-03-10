@@ -15,6 +15,10 @@ hi Normal ctermbg=NONE
 hi SpecialKey ctermbg=NONE
 
 autocmd! bufwritepost .vimrc source %
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
 set laststatus=2
 set nocompatible
