@@ -29,3 +29,8 @@
     deltaCacheSize = 128m
     packSizeLimit = 128m
     windowMemory = 128m
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

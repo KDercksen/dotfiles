@@ -44,6 +44,7 @@ set list
 
 let g:SuperTabDefaultCompletionType="context"
 let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_scala_checkers = []
 let g:jedi#popup_on_dot = 0
 set completeopt=menuone,longest,preview
 let g:pep8_map = '<leader>8'
