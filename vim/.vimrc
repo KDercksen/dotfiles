@@ -57,6 +57,15 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_show_hidden = 1
 let g:solarized_termtrans=1
 
+" Haskell-vim stuff
+let g:haskell_enable_quantification = 1
+let g:haskell_enable_recursivedo = 1
+let g:haskell_enable_arrowsyntax = 1
+let g:haskell_enable_pattern_synonyms = 1
+let g:haskell_enable_typeroles = 1
+let g:haskell_enable_static_pointers = 1
+let g:haskell_backpack = 1
+
 " Change leader key to be ,
 let mapleader=","
 nnoremap <leader>v <Plug>TaskList

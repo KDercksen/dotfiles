@@ -40,3 +40,9 @@
 [submodule "vim/.vim/bundle/rainbow_parentheses.vim"]
 	path = vim/.vim/bundle/rainbow_parentheses.vim
 	url = git@github:kien/rainbow_parentheses.vim
+[submodule "vim/.vim/bundle/haskell-vim"]
+	path = vim/.vim/bundle/haskell-vim
+	url = git@github:neovimhaskell/haskell-vim
+[submodule "vim/.vim/bundle/vim-hoogle"]
+	path = vim/.vim/bundle/vim-hoogle
+	url = git@github:twinside/vim-hoogle
