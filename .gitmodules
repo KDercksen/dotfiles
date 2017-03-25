@@ -43,3 +43,15 @@
 [submodule "vim/.vim/bundle/vim-hoogle"]
 	path = vim/.vim/bundle/vim-hoogle
 	url = git@github:twinside/vim-hoogle
+[submodule "vim/.vim/bundle/neocomplete.vim"]
+	path = vim/.vim/bundle/neocomplete.vim
+	url = git@github:Shougo/neocomplete.vim
+[submodule "vim/.vim/bundle/neco-ghc"]
+	path = vim/.vim/bundle/neco-ghc
+	url = git@github:eagletmt/neco-ghc
+[submodule "vim/.vim/bundle/ghcmod-vim"]
+	path = vim/.vim/bundle/ghcmod-vim
+	url = git@github:eagletmt/ghcmod-vim
+[submodule "vim/.vim/bundle/vimproc.vim"]
+	path = vim/.vim/bundle/vimproc.vim
+	url = git@github:Shougo/vimproc.vim
