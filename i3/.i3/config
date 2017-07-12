@@ -12,11 +12,11 @@
 set $mod Mod4
 
 # Execute autolocker script
-exec xautolock -locker i3lock -time 15
-exec compton -bc
+exec compton -b
 exec pulseaudio --start
-exec feh --bg-scale /home/koen/wall.png
-exec python /usr/local/lib/python2.7/dist-packages/powerline/bindings/lemonbar/powerline-lemonbar.py --i3 -- -f "DejaVu Sans Mono for Powerline-10"
+exec feh --bg-scale --no-xinerama /home/koen/wall.jpg
+exec python3 ~/.local/lib/python3.5/site-packages/powerline/bindings/lemonbar/powerline-lemonbar.py --i3 -- -f "DejaVu Sans Mono for Powerline-10"
+exec conky -d
 exec redshift -l 51.8:5.8
 
 # Font for window titles. Will also be used by the bar unless a different font
