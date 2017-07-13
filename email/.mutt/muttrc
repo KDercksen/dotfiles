@@ -1,0 +1,84 @@
+# basic shit
+set askcc = yes
+set attribution = "On %d, %n wrote:"
+set confirmappend = no
+set date_format = "%d/%m/%y"
+set delete = yes
+set edit_headers = yes
+set editor = vim
+set envelope_from = yes
+set fast_reply = yes
+set fcc_attach = yes
+set folder = ~/.mail
+set forward_decode = yes
+set forward_format = "Fwd: %s"
+set forward_quote = yes
+set from = "mail@koendercksen.com"
+set include = yes
+set index_format = "[%Z]  %D  %-20.20F  %s"
+set mail_check = 0
+set mark_old = no
+set mask = "!^\.[^.]"
+set mbox_type = Maildir
+set mime_forward = no
+set quit = yes
+set realname = "Koen Dercksen"
+set reply_to = yes
+set reverse_name = yes
+set sendmail = "msmtp -a web"
+set sendmail_wait = 0
+set sig_dashes = yes
+set timeout = 3
+set use_from = yes
+set wait_key = no
+
+bind index gg first-entry
+bind index G last-entry
+bind index <tab> sync-mailbox
+bind index <space> collapse-thread
+
+macro index O "<shell-escape>offlineimap -c ~/.config/offlineimap/offlineimaprc -q -uquiet<enter><sync-mailbox>" "Sync email"
+macro index C "<copy-message>?<toggle-mailboxes>" "Copy message to mailbox"
+macro index M "<save-message>?<toggle-mailboxes>" "Copy message to mailbox"
+
+# sidebar stuff
+set mail_check_stats = yes
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set sidebar_visible = yes
+
+bind index,pager K sidebar-prev
+bind index,pager J sidebar-next
+bind index,pager L sidebar-open
+bind index,pager H sidebar-toggle-visible
+
+# header options
+ignore *
+unignore from to cc date subject
+unhdr_order *
+hdr_order from to cc date subject
+
+# pager view/bindings stuff
+set markers = no
+set menu_scroll = yes
+set pager_context = 3
+set pager_index_lines = 10
+set pager_stop = yes
+set tilde = yes
+
+alternative_order text/plain text/enriched text/html
+set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+
+bind pager k previous-line
+bind pager j next-line
+bind pager gg top
+bind pager G bottom
+bind index,pager R group-reply
+
+# spool files
+set postponed = +/Drafts/
+set record = +/Sent/
+set spoolfile = +/INBOX
+
+# sourcing files
+source ~/.mail/mailboxes
+source ~/.mutt/muttcol

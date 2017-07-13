@@ -1,0 +1,33 @@
+[general]
+metadata = ~/.offlineimap
+accounts = web
+maxsyncaccounts = 1
+socktimeout = 60
+ui = quiet
+pythonfile = ~/.config/offlineimap/offlineimap.py
+
+[mbnames]
+enabled = yes
+filename = ~/.mail/mailboxes
+header = "mailboxes "
+peritem = "~/.mail/%(foldername)s/"
+sep = " "
+footer = "\n"
+incremental = yes
+
+[Account web]
+localrepository = Local
+remoterepository = Remote
+
+[Repository Local]
+type = Maildir
+localfolders = ~/.mail
+
+[Repository Remote]
+type = IMAP
+remotepasseval = mailpassword()
+remotehost = mail.axc.nl
+remoteport = 993
+remoteuser = mail@koendercksen.com
+ssl = yes
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
