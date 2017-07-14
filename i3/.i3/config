@@ -176,10 +176,3 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
-# bar {
-#     colors {
-#         statusline #00D5FF
-#     }
-#     status_command i3status -c /home/koen/.i3/i3status.conf
-# }

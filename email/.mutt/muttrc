@@ -75,9 +75,9 @@ bind pager G bottom
 bind index,pager R group-reply
 
 # spool files
-set postponed = +/Drafts/
-set record = +/Sent/
-set spoolfile = +/INBOX
+set postponed = +Drafts
+set record = +Sent
+set spoolfile = +INBOX
 
 # sourcing files
 source ~/.mail/mailboxes
