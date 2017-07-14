@@ -16,6 +16,8 @@ set forward_quote = yes
 set from = "mail@koendercksen.com"
 set include = yes
 set index_format = "[%Z]  %D  %-20.20F  %s"
+set mailcap_path = ~/.mutt/mailcap
+set mailcap_sanitize = yes
 set mail_check = 0
 set mark_old = no
 set mask = "!^\.[^.]"
@@ -67,6 +69,13 @@ set tilde = yes
 
 alternative_order text/plain text/enriched text/html
 set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+
+auto_view text/html
+auto_view application/pdf
+auto_view application/vnd.openxmlformats-officedocument.wordprocessingml.document
+auto_view application/msword
+auto_view application/vnd.openxmlformats-officedocument.wordprocessingml.document
+auto_view application/vnd.oasis.opendocument.text
 
 bind pager k previous-line
 bind pager j next-line
