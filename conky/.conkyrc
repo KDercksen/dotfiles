@@ -63,5 +63,5 @@ conky.text = [[
        ${color #98c2c7}Download:$color  ${downspeedf enp7s0}kb/s
 
     ${color #ffcb48}NOTIFICATIONS$color
-       ${color #98c2c7}Unread email:$color      ${execi 60 checkemail}
+       ${if_match ${exec checkemail} > 0}${color #ff0000}UNREAD MAIL (${exec checkemail})$color${else}${color #98c2c7}No unread email$color${endif}
 ]]
