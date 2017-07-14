@@ -37,13 +37,13 @@ bind index G last-entry
 bind index <tab> sync-mailbox
 bind index <space> collapse-thread
 
-macro index O "<shell-escape>offlineimap -c ~/.config/offlineimap/offlineimaprc -q -uquiet<enter><sync-mailbox>" "Sync email"
+macro index O "<shell-escape>offlineimap -c ~/.config/offlineimap/offlineimaprc -q -uquiet &<enter><sync-mailbox>" "Sync email"
 macro index C "<copy-message>?<toggle-mailboxes>" "Copy message to mailbox"
 macro index M "<save-message>?<toggle-mailboxes>" "Copy message to mailbox"
 
 # sidebar stuff
 set mail_check_stats = yes
-set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set sidebar_format = "%B%* [%?N?%N new&no new?]"
 set sidebar_visible = yes
 
 bind index,pager K sidebar-prev

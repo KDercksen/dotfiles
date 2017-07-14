@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+f=$(mktemp -t XXXXXXXXX.png)
+basef=$(basename "$f")
+maim -s -c 1,0,0,0.3 "$f"
+curl --verbose -u koendfc118:$(pass show Work/versio_directadmin) -T "$f" ftp://koendercksen.com/domains/koendercksen.com/public_html/files/"$basef"
+echo http://koendercksen.com/files/"$basef" | xclip -selection clipboard
+rm -v "$f"
+notify-send http://koendercksen.com/files/"$basef"

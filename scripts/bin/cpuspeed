@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+lscpu | grep 'CPU MHz' | awk '{ printf "%.0f\n", $3 }'
