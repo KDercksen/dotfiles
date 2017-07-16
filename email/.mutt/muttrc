@@ -44,7 +44,7 @@ bind index <space> collapse-thread
 
 macro index O "<shell-escape>offlineimap -c ~/.config/offlineimap/offlineimaprc -q -uquiet &<enter><sync-mailbox>" "Sync email"
 macro index C "<copy-message>?<toggle-mailboxes>" "Copy message to mailbox"
-macro index M "<save-message>?<toggle-mailboxes>" "Copy message to mailbox"
+macro index M "<save-message>?<toggle-mailboxes>" "Move message to mailbox"
 
 # sidebar stuff
 set mail_check_stats = yes

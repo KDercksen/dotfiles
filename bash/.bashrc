@@ -37,7 +37,7 @@ function getlink(){
     pastebinit -i $1 -b http://pastebin.com | xclip -selection clipboard
 }
 
-eval $(keychain --quiet --eval --agents ssh ~/.ssh/github)
+eval $(keychain --quiet --eval ~/.ssh/github)
 if [ -f $(which powerline-daemon) ]; then
     powerline-daemon -q
     POWERLINE_BASH_CONTINUATION=1
