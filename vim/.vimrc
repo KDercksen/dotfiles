@@ -1,10 +1,27 @@
+set nocompatible
 filetype off
-execute pathogen#infect()
-execute pathogen#helptags()
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
 
 python3 from powerline.vim import setup as powerline_setup
 python3 powerline_setup()
 python3 del powerline_setup
+
+Bundle 'gmarik/vundle'
+Bundle 'davidhalter/jedi-vim'
+Bundle 'nvie/vim-flake8'
+Bundle 'fs111/pydoc.vim'
+Bundle 'ervandew/supertab'
+Bundle 'tpope/vim-surround'
+Bundle 'scrooloose/syntastic'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'garbas/vim-snipmate'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'editorconfig/editorconfig-vim'
+Bundle 'ctrlpvim/ctrlp.vim'
+Bundle 'kien/rainbow_parentheses.vim'
+Bundle 'Shougo/neocomplete.vim'
 
 filetype on
 filetype indent plugin on
@@ -21,7 +38,6 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
 set laststatus=2
-set nocompatible
 set history=50
 set number
 set ruler
