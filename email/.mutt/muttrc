@@ -1,4 +1,5 @@
 # basic shit
+set alias_file = ~/.mutt/aliases
 set askcc = yes
 set attribution = "On %d, %n wrote:"
 set confirmappend = no
@@ -31,6 +32,8 @@ set sendmail = "msmtp -a web"
 set sendmail_wait = 0
 set sig_dashes = yes
 set sort = threads
+set sort_alias = alias
+set reverse_alias = yes
 set sort_browser = reverse-date
 set sort_aux = reverse-last-date-received
 set timeout = 3
@@ -94,3 +97,4 @@ set spoolfile = +INBOX
 # sourcing files
 source ~/.mail/mailboxes
 source ~/.mutt/muttcol
+source ~/.mutt/aliases
