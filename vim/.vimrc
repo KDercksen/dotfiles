@@ -62,9 +62,8 @@ set tags=./tags;,tags;
 set listchars=tab:▶\ ,trail:·,extends:»,precedes:«
 set list
 
-let g:SuperTabDefaultCompletionType="context"
-let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_scala_checkers = ['scalac']
+let g:SuperTabDefaultCompletionType = 'context'
+let g:syntastic_python_checkers = ['pyflakes']
 let g:jedi#popup_on_dot = 0
 set completeopt=menuone,longest,preview
 let g:pep8_map = '<leader>8'
@@ -72,6 +71,20 @@ let g:ctrlp_match_window="bottom,order:btt,min:10,max:10"
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_show_hidden = 1
 let g:solarized_termtrans=1
+let g:rbpt_colorpairs = [
+    \ ['brown',       'RoyalBlue3'],
+    \ ['darkgray',    'DarkOrchid3'],
+    \ ['darkcyan',    'RoyalBlue3'],
+    \ ['darkred',     'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['brown',       'firebrick3'],
+    \ ['gray',        'RoyalBlue3'],
+    \ ['black',       'SeaGreen3'],
+    \ ['darkmagenta', 'DarkOrchid3'],
+    \ ['darkcyan',    'SeaGreen3'],
+    \ ['darkred',     'DarkOrchid3'],
+    \ ['red',         'firebrick3'],
+    \ ]
 
 " Haskell-vim stuff
 let g:haskellmode_completion_ghc = 0
