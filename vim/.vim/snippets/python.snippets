@@ -1,13 +1,16 @@
+# set noexpandtab
 snippet #!
-	#!/usr/bin/env
-snippet imp
-	import ${0:module}
+	#!/usr/bin/env python3
+	# -*- coding: utf-8 -*-
+
+
+	${0}
 snippet from
 	from ${1:package} import ${0:module}
 snippet ifmain
 	if __name__ == '__main__':
 		${0:main()}
-snippet "
+snippet '
 	'''${0:doc}
 	'''
 snippet class
