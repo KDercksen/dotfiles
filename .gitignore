@@ -1,4 +1,4 @@
 *.pyc
 vim/.vim/bundle/*
 email/.mutt/aliases
-!vim/.vim/bundle/vundle
+!vim/.vim/bundle/Vundle.vim
