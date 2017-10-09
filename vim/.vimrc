@@ -18,6 +18,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'Shougo/neocomplete.vim'
+Plugin 'tpope/vim-commentary'
 
 call vundle#end()
 
@@ -31,6 +32,8 @@ set background=dark
 colorscheme solarized
 hi Normal ctermbg=NONE
 hi SpecialKey ctermbg=NONE
+
+autocmd FileType html setlocal commentstring=<!--\ %s\ -->
 
 autocmd! bufwritepost .vimrc source %
 au VimEnter * RainbowParenthesesToggle
