@@ -15,7 +15,7 @@ export PATH=~/.local/bin:~/bin:/sbin:/usr/local/sbin:/usr/sbin:$PATH
 export WORKON_HOME=/home/koen/venvs
 export PROJECT_HOME=/home/koen/projects
 export SPARK_HOME=/usr/local/spark
-export PYTHONPATH=$SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.10.3-src.zip:$PYTHONPATH
+export PYTHONPATH=/home/koen/.local/lib/python3.6/site-packages:$PYTHONPATH
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 
 # Set the title of X terminals
