@@ -2,5 +2,6 @@
 vim/.vim/bundle/*
 email/.mutt/aliases
 !vim/.vim/bundle/Vundle.vim
-nvim/
+nvim/*
 !nvim/.config/nvim/init.vim
+!nvim/.local/share/nvim/site/autoload/plug.vim
