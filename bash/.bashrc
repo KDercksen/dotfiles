@@ -6,9 +6,10 @@ alias c="clear"
 alias tag="ctags -R ."
 alias update="sudo apt-get update"
 alias upgrade="sudo apt-get upgrade"
-alias fuck='sudo $(history -p \!\!)'
+alias fuck="sudo $(history -p \!\!)"
+alias v=nvim
 
-export EDITOR=vim
+export EDITOR=nvim
 export TERMINAL=urxvt
 export BROWSER=google-chrome
 export PATH=~/.local/bin:~/bin:/sbin:/usr/local/sbin:/usr/sbin:$PATH
