@@ -67,6 +67,8 @@ let g:airline_powerline_fonts = 1
 
 let g:SuperTabDefaultCompletionType = 'context'
 
+let g:ultisnips_python_quoting_style = 'single'
+
 let g:jedi#popup_on_dot = 0
 
 let g:deoplete#enable_at_startup = 1
