@@ -1,30 +1,35 @@
 call plug#begin()
 
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'SirVer/ultisnips'
+Plug 'altercation/vim-colors-solarized'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'ervandew/supertab'
+Plug 'fs111/pydoc.vim'
+Plug 'honza/vim-snippets'
+Plug 'kien/rainbow_parentheses.vim'
+Plug 'neomake/neomake'
+Plug 'nvie/vim-flake8'
+Plug 'tomtom/tlib_vim'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'davidhalter/jedi-vim'
-Plug 'nvie/vim-flake8'
-Plug 'fs111/pydoc.vim'
-Plug 'ervandew/supertab'
-Plug 'tpope/vim-surround'
-Plug 'neomake/neomake'
-Plug 'altercation/vim-colors-solarized'
-Plug 'garbas/vim-snipmate'
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'kien/rainbow_parentheses.vim'
-Plug 'Shougo/neocomplete.vim'
-Plug 'tpope/vim-commentary'
+Plug 'zchee/deoplete-jedi'
 
 call plug#end()
 call neomake#configure#automake('w')
 
 set background=dark
 colorscheme solarized
-hi Normal ctermbg=NONE
-hi SpecialKey ctermbg=NONE
+" Fixes for SignColumn messages
+hi NeomakeErrorSign ctermbg=0 ctermfg=9
+hi NeomakeInfoSign ctermbg=0 ctermfg=6
+hi NeomakeMessageSign ctermbg=0 ctermfg=4
+hi NeomakeWarningSign ctermbg=0 ctermfg=5
+hi SignColumn ctermbg=0
 
 autocmd FileType html setlocal commentstring=<!--\ %s\ -->
 
@@ -33,36 +38,45 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
-set history=50
-set number
-set whichwrap+=<,>,h,l
-set noerrorbells
-set novisualbell
-set foldmethod=indent
+set autochdir
+set cc=80
+set clipboard=unnamed
+set completeopt=menuone,longest,preview
+set expandtab
 set foldlevel=99
-set tabstop=4
+set foldmethod=indent
+set history=50
+set ignorecase
+set list
+set listchars=tab:▶\ ,trail:·,extends:»,precedes:«
+set mouse=""
+set noerrorbells
+set noswapfile
+set novisualbell
+set number
+set relativenumber
 set shiftwidth=4
 set softtabstop=4
-set expandtab
-set autochdir
-set clipboard=unnamed
-set cc=80
-set mouse=""
-set noswapfile
 set t_Co=256
-set listchars=tab:▶\ ,trail:·,extends:»,precedes:«
-set list
+set tabstop=4
+set timeoutlen=1000 ttimeoutlen=0
+set whichwrap+=<,>,h,l
 
 let g:airline_theme = 'solarized'
 let g:airline_solarized_bg = 'dark'
 let g:airline_powerline_fonts = 1
+
 let g:SuperTabDefaultCompletionType = 'context'
+
 let g:jedi#popup_on_dot = 0
-set completeopt=menuone,longest,preview
+
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#disable_auto_complete = 1
+
 let g:ctrlp_match_window = 'bottom,order:btt,min:10,max:10'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_show_hidden = 1
-let g:solarized_termtrans = 1
+
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
     \ ['darkgray',    'DarkOrchid3'],
@@ -80,12 +94,6 @@ let g:rbpt_colorpairs = [
 
 " Change leader key to be ,
 let mapleader=","
-
-" Change Snipmate trigger to
-imap <leader>[ <Plug>snipMateNextOrTrigger
-smap <leader>[ <Plug>snipMateNextOrTrigger
-imap <leader>{ <Plug>snipMateBack
-smap <leader>{ <Plug>snipMateBack
 
 " Map Ctrl+movement keys to move around windows
 map <C-j> <C-w>j

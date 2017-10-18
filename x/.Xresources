@@ -54,8 +54,7 @@ URxvt.pointerBlank:         true
 
 !!Source http://github.com/altercation/solarized
 
-#define trans_bg rgba:0000/2b00/3600/cc00
-URxvt*background: trans_bg
+*background: #002b36
 *foreground: #657b83
 *cursorColor: #93a1a1
 *pointerColorBackground: #586e75

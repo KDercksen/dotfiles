@@ -4,9 +4,8 @@ alias egrep="egrep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias c="clear"
 alias tag="ctags -R ."
-alias update="sudo apt-get update"
-alias upgrade="sudo apt-get upgrade"
-alias fuck="sudo $(history -p \!\!)"
+alias update="sudo apt update"
+alias upgrade="sudo apt upgrade"
 alias v=nvim
 
 export EDITOR=nvim
