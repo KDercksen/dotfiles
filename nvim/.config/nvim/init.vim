@@ -10,6 +10,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'ervandew/supertab'
 Plug 'fs111/pydoc.vim', { 'for': 'python' }
 Plug 'kien/rainbow_parentheses.vim'
+Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'neomake/neomake'
 Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-commentary'
@@ -71,6 +72,8 @@ let g:ultisnips_python_quoting_style = 'single'
 let g:ultisnips_python_style = 'google'
 
 let g:jedi#popup_on_dot = 0
+
+let g:tex_flavor = 'latex'
 
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#disable_auto_complete = 1
