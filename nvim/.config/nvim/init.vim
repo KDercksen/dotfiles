@@ -1,5 +1,6 @@
 call plug#begin()
 
+Plug 'KDercksen/vim-snippets'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'SirVer/ultisnips'
@@ -7,8 +8,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ervandew/supertab'
-Plug 'fs111/pydoc.vim'
-Plug 'honza/vim-snippets'
+Plug 'fs111/pydoc.vim', { 'for': 'python' }
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'neomake/neomake'
 Plug 'tomtom/tlib_vim'
@@ -16,7 +16,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'zchee/deoplete-jedi'
+Plug 'zchee/deoplete-jedi', { 'for': 'python' }
 
 call plug#end()
 call neomake#configure#automake('w')
@@ -68,6 +68,7 @@ let g:airline_powerline_fonts = 1
 let g:SuperTabDefaultCompletionType = 'context'
 
 let g:ultisnips_python_quoting_style = 'single'
+let g:ultisnips_python_style = 'google'
 
 let g:jedi#popup_on_dot = 0
 
