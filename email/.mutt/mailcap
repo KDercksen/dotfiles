@@ -1,5 +1,6 @@
 # Fork off a process
 application/pdf; gv %s;
+application/octet; gv %s;
 text/html; google-chrome %s & sleep 5;
 
 # Open document formats

@@ -10,4 +10,4 @@ URL="ftp://koendercksen.com/domains/koendercksen.com/public_html/files/"
 
 echo Uploading $LOCALFILE to $URL$REMOTEFILE ...
 
-curl --verbose -u koendfc118:$(pass show Work/versio_directadmin) -T $LOCALFILE $URL$(basename $REMOTEFILE)
+curl --verbose -u koendfc118:$(pass show Work/versio_directadmin) -T "$LOCALFILE" $URL$(basename "$REMOTEFILE")

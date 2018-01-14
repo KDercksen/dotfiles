@@ -12,6 +12,7 @@ Plug 'fs111/pydoc.vim', { 'for': 'python' }
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'neomake/neomake'
+Plug 'skywind3000/asyncrun.vim'
 Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
