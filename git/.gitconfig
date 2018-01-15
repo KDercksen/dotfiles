@@ -24,6 +24,7 @@
     packedGitLimit = 128m
     packedGitWindowSize = 128m
     fileMode = off
+    excludesfile = ~/.gitignore_global
 
 [pack]
     deltaCacheSize = 128m
