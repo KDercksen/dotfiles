@@ -11,12 +11,13 @@ alias v=nvim
 export EDITOR=nvim
 export TERMINAL=urxvt
 export BROWSER=google-chrome
-export PATH=~/.local/bin:~/bin:/sbin:/usr/local/sbin:/usr/sbin:$PATH
 export WORKON_HOME=/home/koen/venvs
 export PROJECT_HOME=/home/koen/projects
 export SPARK_HOME=/usr/local/spark
-export PYTHONPATH=/home/koen/.local/lib/python3.6/site-packages:$PYTHONPATH
+export PYENV_ROOT=~/.pyenv
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+export PATH=$PYENV_ROOT/bin:~/.local/bin:~/bin:/sbin:/usr/local/sbin:/usr/sbin:$PATH
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
 # Set the title of X terminals
 if [[ $TERM =~ "xterm|*rxvt*" ]]; then
@@ -24,18 +25,10 @@ if [[ $TERM =~ "xterm|*rxvt*" ]]; then
     trap 'set_title' DEBUG
 fi
 
-# Function to run a certain command multiple times
-function run(){
-    number=$1
-    shift
-    for i in `seq $number`; do
-        $@
-    done
-}
-
-function getlink(){
-    pastebinit -i $1 -b http://pastebin.com | xclip -selection clipboard
-}
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+fi
 
 eval $(keychain --quiet --eval ~/.ssh/github)
 if [ -f $(which powerline-daemon) ]; then

@@ -15,7 +15,7 @@ set $mod Mod4
 exec compton -b
 exec pulseaudio --start
 exec feh --bg-scale --no-xinerama /home/koen/wall.jpg
-exec python3 ~/.local/lib/python3.6/site-packages/powerline/bindings/lemonbar/powerline-lemonbar.py --i3 -- -f "DejaVu Sans Mono for Powerline-10"
+exec python3 ~/.pyenv/versions/3.6.4/lib/python3.6/site-packages/powerline/bindings/lemonbar/powerline-lemonbar.py --i3 -- -f "DejaVu Sans Mono for Powerline-10"
 exec conky -d
 exec redshift -l 51.8:5.8
 

@@ -6,11 +6,11 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'SirVer/ultisnips'
 Plug 'altercation/vim-colors-solarized'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'davidhalter/jedi-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'ervandew/supertab'
-Plug 'fs111/pydoc.vim', { 'for': 'python' }
+Plug 'fs111/pydoc.vim'
 Plug 'kien/rainbow_parentheses.vim'
-Plug 'lervag/vimtex', { 'for': 'tex' }
 Plug 'neomake/neomake'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'tomtom/tlib_vim'
@@ -18,7 +18,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'zchee/deoplete-jedi', { 'for': 'python' }
+" Plug 'zchee/deoplete-jedi'
 
 call plug#end()
 call neomake#configure#automake('w')
@@ -62,6 +62,9 @@ set t_Co=256
 set tabstop=4
 set timeoutlen=1000 ttimeoutlen=0
 set whichwrap+=<,>,h,l
+
+let g:python_host_prog = '/home/koen/.pyenv/versions/neovim2/bin/python'
+let g:python3_host_prog = '/home/koen/.pyenv/versions/neovim3/bin/python'
 
 let g:airline_theme = 'solarized'
 let g:airline_solarized_bg = 'dark'
