@@ -63,7 +63,6 @@ set tabstop=4
 set timeoutlen=1000 ttimeoutlen=0
 set whichwrap+=<,>,h,l
 
-let g:python_host_prog = '/home/koen/.pyenv/versions/neovim2/bin/python'
 let g:python3_host_prog = '/home/koen/.pyenv/versions/neovim3/bin/python'
 
 let g:airline_theme = 'solarized'
