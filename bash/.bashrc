@@ -5,7 +5,7 @@ alias fgrep="fgrep --color=auto"
 alias c="clear"
 alias tag="ctags -R ."
 alias update="sudo apt update"
-alias upgrade="sudo apt upgrade"
+alias upgrade="sudo apt full-upgrade"
 alias v=nvim
 
 export EDITOR=nvim
