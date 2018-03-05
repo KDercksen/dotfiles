@@ -16,8 +16,9 @@ export PROJECT_HOME=/home/koen/projects
 export SPARK_HOME=/usr/local/spark
 export PYENV_ROOT=~/.pyenv
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
-export PATH=$PYENV_ROOT/bin:~/.local/bin:~/bin:/sbin:/usr/local/sbin:/usr/sbin:$PATH
+export PATH=$PYENV_ROOT/bin:~/.local/bin:~/bin:/sbin:/usr/local/sbin:/usr/sbin:/usr/local/cuda-9.1/bin:$PATH
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+export LD_LIBRARY_PATH=/usr/local/cuda-9.1/lib64:$LD_LIBRARY_PATH
 
 # Set the title of X terminals
 if [[ $TERM =~ "xterm|*rxvt*" ]]; then
