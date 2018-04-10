@@ -55,10 +55,10 @@ conky.text = [[
        ${color #a3a3a3}${top_mem name 3} ${top_mem pid 3}   ${top_mem cpu 3}    ${top_mem mem 3}
        ${color #828282}${top_mem name 4} ${top_mem pid 4}   ${top_mem cpu 4}    ${top_mem mem 4}
 
-       ${color #98c2c7}/:$color       ${fs_free_perc /}%  ${fs_free /}  ${color #78af78}${fs_bar 6 /}$color
-       ${color #98c2c7}/mnt/D:$color  ${fs_free_perc /mnt/D}%  ${fs_free /mnt/D}  ${color #78af78}${fs_bar 6 /mnt/D}$color
-       ${color #98c2c7}/mnt/F:$color  ${fs_free_perc /mnt/F}%  ${fs_free /mnt/F}  ${color #78af78}${fs_bar 6 /mnt/F}$color
+       ${color #98c2c7}root:$color     ${fs_free_perc /}%  ${fs_free /}  ${color #78af78}${fs_bar 6 /}$color
+       ${color #98c2c7}home:$color     ${fs_free_perc /home/koen}%  ${fs_free /home/koen}  ${color #78af78}${fs_bar 6 /home/koen}$color
+       ${color #98c2c7}storage:$color  ${fs_free_perc /mnt/storage}%  ${fs_free /mnt/storage}  ${color #78af78}${fs_bar 6 /mnt/storage}$color
 
-       ${color #98c2c7}Upload:$color    ${upspeedf enp7s0}kb/s
-       ${color #98c2c7}Download:$color  ${downspeedf enp7s0}kb/s
+       ${color #98c2c7}Upload:$color    ${upspeedf enp0s31f6}kb/s
+       ${color #98c2c7}Download:$color  ${downspeedf enp0s31f6}kb/s
 ]]
