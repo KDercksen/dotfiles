@@ -9,7 +9,7 @@ alias upgrade="sudo apt full-upgrade"
 alias v=nvim
 
 export EDITOR=nvim
-export TERMINAL=urxvt
+export TERMINAL=st
 export BROWSER=google-chrome
 export WORKON_HOME=/home/koen/venvs
 export PROJECT_HOME=/home/koen/projects
@@ -32,9 +32,5 @@ if command -v pyenv 1>/dev/null 2>&1; then
 fi
 
 eval $(keychain --quiet --eval ~/.ssh/github)
-if [ -f $(which powerline-daemon) ]; then
-    powerline-daemon -q
-    POWERLINE_BASH_CONTINUATION=1
-    POWERLINE_BASH_SELECT=1
-    . ~/.pyenv/versions/3.6.4/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
-fi
+
+(cat ~/.cache/wal/sequences &)

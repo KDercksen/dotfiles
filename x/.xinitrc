@@ -3,6 +3,8 @@ urxvtd -q -o -f
 xrandr --output DVI-I-1 --auto --left-of DVI-D-1
 setterm --powersave off --powerdown 0
 xset s off
+xset +fp ~/.local/share/fonts
+xset fp rehash
 
 # Do gpg-agent stuff
 envfile="$HOME/.gnupg/gpg-agent.env"

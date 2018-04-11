@@ -1,6 +1,7 @@
 call plug#begin()
 
 Plug 'KDercksen/vim-snippets'
+Plug 'dylanaraps/wal.vim'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'SirVer/ultisnips'
@@ -24,7 +25,7 @@ call plug#end()
 call neomake#configure#automake('w')
 
 set background=dark
-colorscheme solarized
+colorscheme wal
 " Fixes for SignColumn messages
 hi NeomakeErrorSign ctermbg=0 ctermfg=9
 hi NeomakeInfoSign ctermbg=0 ctermfg=6
@@ -43,6 +44,7 @@ set autochdir
 set cc=80
 set clipboard=unnamed
 set completeopt=menuone,longest,preview
+set encoding=utf-8
 set expandtab
 set foldlevel=99
 set foldmethod=indent
@@ -65,8 +67,6 @@ set whichwrap+=<,>,h,l
 
 let g:python3_host_prog = '/home/koen/.pyenv/versions/neovim3/bin/python'
 
-let g:airline_theme = 'solarized'
-let g:airline_solarized_bg = 'dark'
 let g:airline_powerline_fonts = 1
 
 let g:SuperTabDefaultCompletionType = 'context'
