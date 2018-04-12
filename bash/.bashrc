@@ -7,6 +7,7 @@ alias tag="ctags -R ."
 alias update="sudo apt update"
 alias upgrade="sudo apt full-upgrade"
 alias v=nvim
+alias m=neomutt
 
 export EDITOR=nvim
 export TERMINAL=st
@@ -19,6 +20,7 @@ export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 export PATH=$PYENV_ROOT/bin:~/.local/bin:~/bin:/sbin:/usr/local/sbin:/usr/sbin:/usr/local/cuda/bin:$PATH
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+export XDG_CONFIG_HOME=/home/koen/.config
 
 # Set the title of X terminals
 if [[ $TERM =~ "xterm|*rxvt*" ]]; then

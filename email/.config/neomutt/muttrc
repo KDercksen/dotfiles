@@ -1,5 +1,5 @@
 # basic shit
-set alias_file = ~/.mutt/aliases
+set alias_file = ~/.config/neomutt/aliases
 set askcc = yes
 set attribution = "On %d, %n wrote:"
 set confirmappend = no
@@ -17,7 +17,7 @@ set forward_quote = yes
 set from = "mail@koendercksen.com"
 set include = yes
 set index_format = "[%Z]  %D  %-20.20F  %s"
-set mailcap_path = ~/.mutt/mailcap
+set mailcap_path = $XDG_CONFIG_HOME/mailcap
 set mailcap_sanitize = yes
 set mail_check = 0
 set mark_old = no
@@ -40,6 +40,7 @@ set timeout = 3
 set use_from = yes
 set wait_key = no
 
+bind index g noop
 bind index gg first-entry
 bind index G last-entry
 bind index <tab> sync-mailbox
@@ -83,6 +84,7 @@ auto_view application/msword
 auto_view application/vnd.openxmlformats-officedocument.wordprocessingml.document
 auto_view application/vnd.oasis.opendocument.text
 
+bind pager g noop
 bind pager k previous-line
 bind pager j next-line
 bind pager gg top
@@ -96,5 +98,5 @@ set spoolfile = +INBOX
 
 # sourcing files
 source ~/.mail/mailboxes
-source ~/.mutt/muttcol
-source ~/.mutt/aliases
+source ~/.config/neomutt/muttcol
+source ~/.config/neomutt/aliases
