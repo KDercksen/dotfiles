@@ -22,12 +22,6 @@ export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 export XDG_CONFIG_HOME=/home/koen/.config
 
-# Set the title of X terminals
-if [[ $TERM =~ "xterm|*rxvt*" ]]; then
-    # set -o functrace
-    trap 'set_title' DEBUG
-fi
-
 if command -v pyenv 1>/dev/null 2>&1; then
     eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
