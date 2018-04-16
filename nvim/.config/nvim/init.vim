@@ -32,6 +32,7 @@ hi NeomakeInfoSign ctermbg=0 ctermfg=6
 hi NeomakeMessageSign ctermbg=0 ctermfg=4
 hi NeomakeWarningSign ctermbg=0 ctermfg=5
 hi SignColumn ctermbg=0
+hi NonText ctermfg=7
 
 autocmd FileType html setlocal commentstring=<!--\ %s\ -->
 

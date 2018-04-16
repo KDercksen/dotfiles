@@ -192,5 +192,5 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec compton -b
 exec pulseaudio --start
 exec redshift -l 51.8:5.8
-exec wal -a "alpha" -i $HOME/wall.jpg -n
+exec wal -i $HOME/wall.jpg -n
 exec feh --bg-scale --no-xinerama $HOME/wall.jpg
