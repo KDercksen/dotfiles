@@ -2,6 +2,7 @@
 application/pdf; evince %s;
 application/octet; evince %s;
 text/html; google-chrome %s & sleep 5;
+image/*; display %s;
 
 # Open document formats
 application/vnd.oasis.opendocument.text; libreoffice '%s';

@@ -111,6 +111,8 @@ alias update="sudo apt update"
 alias upgrade="sudo apt full-upgrade"
 alias v=nvim
 alias m=neomutt
+alias ra=ranger
+alias cmpv="mpv --no-audio-display"
 
 export EDITOR=nvim
 export TERMINAL=st
