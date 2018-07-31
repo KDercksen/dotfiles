@@ -1,8 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
-export ZSH=/home/koen/.oh-my-zsh
+# Path to your oh-my-zsh installation.  export ZSH=/home/koen/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -54,7 +53,7 @@ COMPLETION_WAITING_DOTS="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 #
-DEFAULT_USER="koen"
+DEFAULT_USER="$(whoami)"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -68,8 +67,11 @@ plugins=(
   git
   vi-mode
   virtualenv
+  tmux
+  tmuxinator
 )
 
+export ZSH=/home/koen/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -128,5 +130,3 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 eval $(keychain --quiet --eval ~/.ssh/github)
-
-(cat ~/.cache/wal/sequences &)

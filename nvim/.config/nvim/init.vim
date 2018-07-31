@@ -1,7 +1,6 @@
 call plug#begin()
 
 Plug 'KDercksen/vim-snippets'
-Plug 'dylanaraps/wal.vim'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'SirVer/ultisnips'
@@ -19,20 +18,21 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-" Plug 'zchee/deoplete-jedi'
 
 call plug#end()
 call neomake#configure#automake('w')
 
+colorscheme solarized
 set background=dark
-colorscheme wal
 " Fixes for SignColumn messages
-hi NeomakeErrorSign ctermbg=0 ctermfg=9
-hi NeomakeInfoSign ctermbg=0 ctermfg=6
-hi NeomakeMessageSign ctermbg=0 ctermfg=4
-hi NeomakeWarningSign ctermbg=0 ctermfg=5
-hi SignColumn ctermbg=0
-hi NonText ctermfg=7
+hi NeomakeErrorSign ctermbg=NONE ctermfg=9
+hi NeomakeInfoSign ctermbg=NONE ctermfg=6
+hi NeomakeMessageSign ctermbg=NONE ctermfg=4
+hi NeomakeWarningSign ctermbg=NONE ctermfg=5
+hi SignColumn ctermbg=NONE
+hi NonText ctermbg=NONE ctermfg=7
+hi! Normal ctermbg=NONE
+hi LineNr ctermbg=NONE
 
 autocmd FileType html setlocal commentstring=<!--\ %s\ -->
 
@@ -64,6 +64,7 @@ set softtabstop=4
 set t_Co=256
 set tabstop=4
 set timeoutlen=1000 ttimeoutlen=0
+set wildignore+=*/data/*,*/tmp/*,*.so,*.swap,*.zip,*.tar.gz
 set whichwrap+=<,>,h,l
 
 let g:python3_host_prog = '/home/koen/.pyenv/versions/neovim3/bin/python'
@@ -78,9 +79,6 @@ let g:ultisnips_python_style = 'google'
 let g:jedi#popup_on_dot = 0
 
 let g:tex_flavor = 'latex'
-
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#disable_auto_complete = 1
 
 let g:ctrlp_match_window = 'bottom,order:btt,min:10,max:10'
 let g:ctrlp_working_path_mode = 'ra'
@@ -100,6 +98,8 @@ let g:rbpt_colorpairs = [
     \ ['darkred',     'DarkOrchid3'],
     \ ['red',         'firebrick3'],
     \ ]
+
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 " Change leader key to be ,
 let mapleader=","

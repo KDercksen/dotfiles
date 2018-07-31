@@ -187,10 +187,9 @@ client.placeholder      $bg     $bg     $fg  $bg       $bg
 
 client.background       $bg
 
-exec xrdb /home/koen/.cache/wal/colors.Xresources
+exec xrdb /home/koen/.Xresources
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec compton -b
 exec pulseaudio --start
 exec redshift -l 51.8:5.8
-exec wal -i $HOME/wall.jpg -n
 exec feh --bg-scale --no-xinerama $HOME/wall.jpg
