@@ -49,9 +49,10 @@ modules-left = i3
 modules-center = 
 modules-right = memory cpu temperature
 
-tray-position = right
-tray-padding = 2
-tray-transparent = true
+tray-position = center
+tray-detached = false
+tray-padding = 3
+tray-transparent = false
 tray-background = ${colors.background}
 
 ;wm-restack = bspwm
@@ -99,10 +100,10 @@ modules-left = i3
 modules-center = 
 modules-right = filesystem eth date
 
-tray-position = right
-tray-padding = 2
-tray-transparent = true
-tray-background = ${colors.background}
+;tray-position = right
+;tray-padding = 2
+;tray-transparent = false
+;tray-background = ${colors.background}
 
 ;wm-restack = bspwm
 ;wm-restack = i3
