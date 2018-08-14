@@ -47,7 +47,7 @@ font-1 = FontAwesome:size=10:autohint=true:antialias=true;1
 
 modules-left = i3
 modules-center = 
-modules-right = memory cpu temperature
+modules-right = mpd memory cpu temperature
 
 tray-position = center
 tray-detached = false
@@ -216,11 +216,35 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 type = internal/mpd
 format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
 
-icon-prev = 
-icon-stop = 
-icon-play = 
-icon-pause = 
-icon-next = 
+host = 127.0.0.1
+port = 6600
+interval = 2
+
+label-song = 🎜  %artist% - %title%
+
+; Available tokens:
+;   %elapsed%
+;   %total%
+; Default: %elapsed% / %total%
+;label-time = %elapsed% / %total%
+
+; Available tokens:
+;   None
+label-offline = 🎜  mpd is offline
+
+; Only applies if <icon-X> is used
+icon-play = ⏵
+icon-pause = ⏸
+icon-stop = ⏹
+icon-prev = ⏮
+icon-next = ⏭
+icon-seekb = ⏪
+icon-seekf = ⏩
+icon-random = 🔀
+icon-repeat = 🔁
+icon-repeatone = 🔂
+icon-single = 🔂
+icon-consume = ✀
 
 label-song-maxlen = 25
 label-song-ellipsis = true

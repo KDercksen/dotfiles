@@ -189,7 +189,7 @@ client.background       $bg
 
 exec xrdb /home/koen/.Xresources
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec --no-startup-id pulseaudio --start
 exec compton -b
-exec pulseaudio --start
 exec redshift -l 51.8:5.8
 exec feh --bg-scale --no-xinerama $HOME/wall.jpg

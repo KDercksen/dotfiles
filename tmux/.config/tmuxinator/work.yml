@@ -10,3 +10,5 @@ windows:
       - tmux a -t chat
   - mail:
       - m
+  - music:
+      - ncmpcpp

@@ -128,5 +128,4 @@ export XDG_CONFIG_HOME=/home/koen/.config
 
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
-
-eval $(keychain --quiet --eval ~/.ssh/github)
+eval "$(keychain --quiet --eval ~/.ssh/github)"
