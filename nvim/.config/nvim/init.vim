@@ -6,9 +6,8 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'SirVer/ultisnips'
 Plug 'altercation/vim-colors-solarized'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'davidhalter/jedi-vim'
+Plug 'zchee/deoplete-jedi'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'ervandew/supertab'
 Plug 'fs111/pydoc.vim'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'neomake/neomake'
@@ -71,12 +70,12 @@ let g:python3_host_prog = '/home/koen/.pyenv/versions/neovim3/bin/python'
 
 let g:airline_powerline_fonts = 1
 
-let g:SuperTabDefaultCompletionType = 'context'
-
 let g:ultisnips_python_quoting_style = 'single'
 let g:ultisnips_python_style = 'google'
 
-let g:jedi#popup_on_dot = 0
+let g:deoplete#popup_on_dot = 0
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#max_list = 10
 
 let g:tex_flavor = 'latex'
 

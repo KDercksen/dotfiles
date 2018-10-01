@@ -115,6 +115,7 @@ alias v=nvim
 alias m=neomutt
 alias ra=ranger
 alias cmpv="mpv --no-audio-display"
+alias t=todo.sh
 
 export EDITOR=nvim
 export TERMINAL=st
