@@ -68,6 +68,8 @@ set whichwrap+=<,>,h,l
 
 let g:python3_host_prog = '/home/koen/.pyenv/versions/neovim3/bin/python'
 
+let g:neomake_python_enabled_makers = ['flake8', 'mypy']
+
 let g:airline_powerline_fonts = 1
 
 let g:ultisnips_python_quoting_style = 'single'
