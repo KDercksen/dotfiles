@@ -1,5 +1,4 @@
 # basic shit
-set alias_file = ~/.config/neomutt/aliases
 set askcc = yes
 set attribution = "On %d, %n wrote:"
 set confirmappend = no
@@ -110,4 +109,3 @@ set spoolfile = +INBOX
 # sourcing files
 source ~/.mail/mailboxes
 source ~/.config/neomutt/muttcol
-source ~/.config/neomutt/aliases
