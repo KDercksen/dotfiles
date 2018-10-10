@@ -15,6 +15,11 @@ set forward_decode = yes
 set forward_format = "Fwd: %s"
 set forward_quote = yes
 set from = "mail@koendercksen.com"
+set crypt_use_gpgme = yes
+set crypt_autosign
+set crypt_replysign
+set crypt_replysignencrypted = yes
+set crypt_verify_sig = yes
 set include = yes
 set index_format = "[%Z]  %D  %-20.20F  %s"
 set mailcap_path = ~/.config/neomutt/mailcap
@@ -24,6 +29,7 @@ set mark_old = no
 set mask = "!^\.[^.]"
 set mbox_type = Maildir
 set mime_forward = no
+set query_command = "abook --mutt-query '%s'"
 set quit = yes
 set realname = "Koen Dercksen"
 set reply_to = yes
@@ -45,10 +51,12 @@ bind index gg first-entry
 bind index G last-entry
 bind index <tab> sync-mailbox
 bind index <space> collapse-thread
+bind editor <tab> complete-query
 
 macro index O "<shell-escape>offlineimap -c ~/.config/offlineimap/offlineimaprc -q -uquiet &<enter><sync-mailbox>" "Sync email"
 macro index C "<copy-message>?<toggle-mailboxes>" "Copy message to mailbox"
 macro index M "<save-message>?<toggle-mailboxes>" "Move message to mailbox"
+macro index,pager a "<pipe-message>abook --add-email-quiet<return>" "Add this sender to address book"
 
 # sidebar stuff
 set mail_check_stats = yes
