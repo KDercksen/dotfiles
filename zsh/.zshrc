@@ -1,7 +1,7 @@
-ZSH_THEME="agnoster"
+ZSH_THEME="spaceship"
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
-DEFAULT_USER="$(whoami)"
+SPACESHIP_VENV_SHOW="false"
 
 plugins=(
   colored-man-pages
@@ -10,10 +10,11 @@ plugins=(
   extract
   git
   github
-  vi-mode
-  virtualenv
   tmux
   tmuxinator
+  vi-mode
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 export BROWSER=google-chrome
@@ -21,7 +22,8 @@ export EDITOR=nvim
 export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 export PYENV_ROOT=~/.pyenv
-export PATH=$PYENV_ROOT/bin:~/.local/bin:~/bin:/sbin:/usr/local/sbin:/usr/sbin:/usr/local/cuda/bin:$PATH
+export PATH=~/.cargo/bin:$PYENV_ROOT/bin:~/.local/bin:~/bin:/sbin:$PATH
+export PATH=/usr/local/sbin:/usr/sbin:/usr/local/cuda/bin:$PATH
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 export TERMINAL=st
 export XDG_CONFIG_HOME=/home/koen/.config

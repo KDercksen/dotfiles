@@ -1,5 +1,6 @@
 call plug#begin()
 
+Plug 'ambv/black'
 Plug 'KDercksen/vim-snippets'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -11,6 +12,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'fs111/pydoc.vim'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'neomake/neomake'
+Plug 'sebastianmarkow/deoplete-rust'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-commentary'
@@ -34,6 +36,7 @@ hi! Normal ctermbg=NONE
 hi LineNr ctermbg=NONE
 
 autocmd FileType html setlocal commentstring=<!--\ %s\ -->
+autocmd BufWritePre *.py execute ':Black'
 
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
@@ -66,6 +69,7 @@ set timeoutlen=1000 ttimeoutlen=0
 set wildignore+=*/data/*,*/tmp/*,*.so,*.swap,*.zip,*.tar.gz
 set whichwrap+=<,>,h,l
 
+let g:black_virtualenv = '/home/koen/.pyenv/versions/neovim3'
 let g:python3_host_prog = '/home/koen/.pyenv/versions/neovim3/bin/python'
 
 let g:neomake_python_enabled_makers = ['flake8', 'mypy']
@@ -78,6 +82,10 @@ let g:ultisnips_python_style = 'google'
 let g:deoplete#popup_on_dot = 0
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#max_list = 10
+
+let g:deoplete#sources#rust#racer_binary = '/home/koen/.cargo/bin/racer'
+let g:deoplete#sources#rust#rust_source_path = '/home/koen/rust/src'
+let g:deoplete#sources#rust#show_duplicates = 0
 
 let g:tex_flavor = 'latex'
 
