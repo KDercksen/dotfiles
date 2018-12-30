@@ -4,10 +4,12 @@ Plug 'ambv/black'
 Plug 'KDercksen/vim-snippets'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/neoinclude.vim'
 Plug 'SirVer/ultisnips'
 Plug 'altercation/vim-colors-solarized'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'zchee/deoplete-jedi'
+Plug 'zchee/deoplete-clang'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fs111/pydoc.vim'
 Plug 'kien/rainbow_parentheses.vim'
@@ -86,6 +88,9 @@ let g:deoplete#max_list = 10
 let g:deoplete#sources#rust#racer_binary = '/home/koen/.cargo/bin/racer'
 let g:deoplete#sources#rust#rust_source_path = '/home/koen/rust/src'
 let g:deoplete#sources#rust#show_duplicates = 0
+
+let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm-7/lib/libclang.so'
+let g:deoplete#sources#clang#clang_header = '/usr/lib/llvm-7/lib/clang'
 
 let g:tex_flavor = 'latex'
 

@@ -191,4 +191,4 @@ exec xrdb /home/koen/.Xresources
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec compton -b
 exec redshift -l 51.8:5.8
-exec feh --bg-scale --no-xinerama $HOME/wall.jpg
+exec feh --bg-fill $HOME/wall.jpg

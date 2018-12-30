@@ -1,5 +1,5 @@
 xrdb -merge ~/.Xresources
-xrandr --output DVI-I-1 --auto --left-of DVI-D-1
+xrandr --output DP-2 --auto --right-of DP-4
 setterm --powersave off --powerdown 0
 xset s off
 xset +fp ~/.local/share/fonts

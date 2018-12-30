@@ -19,7 +19,7 @@ secondary = ${xrdb:color3:#222}
 alert = ${xrdb:color4:#222}
 
 [bar/topleft]
-monitor = ${env:MONITOR:DVI-D-0}
+monitor = ${env:MONITOR:DP-4}
 width = 100%
 height = 27
 ;offset-x = 1%
@@ -70,7 +70,7 @@ cursor-click = pointer
 cursor-scroll = ns-resize
 
 [bar/topright]
-monitor = ${env:MONITOR:DP-1}
+monitor = ${env:MONITOR:DP-2}
 width = 100%
 height = 27
 ;offset-x = 1%

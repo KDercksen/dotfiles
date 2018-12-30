@@ -1,5 +1,5 @@
 mpd_music_dir = "/mnt/server/torrent_complete/music/"
-visualizer_fifo_path = "/dev/shm/mpd.fifo"
+visualizer_fifo_path = "/home/koen/.config/mpd/mpd.fifo"
 visualizer_output_name = "Visualizer"
 visualizer_in_stereo = "yes"
 visualizer_type = "spectrum"
