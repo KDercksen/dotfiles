@@ -22,16 +22,13 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 font pango:DejaVu Sans Mono for Powerline-10
 
 # Lock the screen by pressing ctrl+mod+l
-bindsym $mod+Control+l exec xautolock -locknow
+bindsym $mod+Control+l exec i3lock-fancy
 
 # Open browser by pressing mod+z
-bindsym $mod+z exec google-chrome
+bindsym $mod+z exec brave-browser
 
 # Make screenshot with prtscr button
 bindsym --release Print exec --no-startup-id scr
-
-# Bind mod+p to passmenu
-bindsym $mod+p exec passmenu
 
 # Bind volume keys
 # bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute

@@ -1,7 +1,7 @@
 [user]
     name = KDercksen
     email = mail@koendercksen.com
-    signingkey = 3DD29C85
+    signingkey = 1A8D74C9BFAC6BD4
 
 [credential]
     helper = cache --timeout=86400
@@ -25,6 +25,7 @@
     packedGitWindowSize = 128m
     fileMode = off
     excludesfile = ~/.gitignore_global
+	autocrlf = input
 
 [pack]
     deltaCacheSize = 128m
@@ -37,3 +38,9 @@
 	required = true
 [gpg]
 	program = gpg2
+[merge]
+	tool = vimdiff3
+[mergetool]
+	path = nvim
+[init]
+	defaultBranch = master

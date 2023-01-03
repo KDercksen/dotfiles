@@ -1,32 +1,39 @@
 call plug#begin()
 
-Plug 'ambv/black'
+Plug 'psf/black' , { 'branch': 'stable' }
 Plug 'KDercksen/vim-snippets'
+Plug 'davidhalter/jedi-vim'
 Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/echodoc.vim'
 Plug 'Shougo/neoinclude.vim'
 Plug 'SirVer/ultisnips'
-Plug 'altercation/vim-colors-solarized'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'zchee/deoplete-jedi'
-Plug 'zchee/deoplete-clang'
+Plug 'deoplete-plugins/deoplete-jedi'
+Plug 'deoplete-plugins/deoplete-clang'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'fs111/pydoc.vim'
 Plug 'kien/rainbow_parentheses.vim'
 Plug 'neomake/neomake'
 Plug 'rhysd/vim-clang-format'
-Plug 'sebastianmarkow/deoplete-rust'
+Plug 'scrooloose/nerdtree'
 Plug 'skywind3000/asyncrun.vim'
+Plug 'TovarishFin/vim-solidity'
+Plug 'prettier/vim-prettier', {'do': 'yarn install && yarn add prettier-plugin-solidity',
+                            \  'for': ['javascript', 'typescript', 'css', 'html', 'solidity']}
 Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'vyperlang/vim-vyper'
 
 call plug#end()
 call neomake#configure#automake('w')
 
-colorscheme solarized
+colorscheme tokyonight
 set background=dark
 " Fixes for SignColumn messages
 hi NeomakeErrorSign ctermbg=NONE ctermfg=9
@@ -39,7 +46,9 @@ hi! Normal ctermbg=NONE
 hi LineNr ctermbg=NONE
 
 autocmd FileType html setlocal commentstring=<!--\ %s\ -->
-autocmd BufWritePre *.py execute ':Black'
+autocmd BufWritePre *.py execute ":Black"
+autocmd BufWritePre *.js,*.jsx,*.ts,*.tsx,*.css,*.html,*.sol execute ":Prettier"
+autocmd BufWinEnter '__doc__' setlocal bufhidden=delete
 
 au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
@@ -69,13 +78,18 @@ set softtabstop=4
 set t_Co=256
 set tabstop=4
 set timeoutlen=1000 ttimeoutlen=0
-set wildignore+=*/data/*,*/tmp/*,*.so,*.swap,*.zip,*.tar.gz
+set wildignore+=*/data/*,*/tmp/*,*.so,*.swap,*.zip,*.tar.gz,*/node_modules/*,*/.git/*
 set whichwrap+=<,>,h,l
+
+let g:prettier#exec_cmd_path = '/home/koen/.config/nvim/plugged/vim-prettier/node_modules/.bin/prettier'
+let g:prettier#autoformat = 1
 
 let g:black_virtualenv = '/home/koen/.pyenv/versions/neovim3'
 let g:python3_host_prog = '/home/koen/.pyenv/versions/neovim3/bin/python'
 
 let g:neomake_python_enabled_makers = ['flake8', 'mypy']
+
+let g:jedi#completions_enabled = 0
 
 let g:airline_powerline_fonts = 1
 
@@ -84,7 +98,7 @@ let g:ultisnips_python_style = 'google'
 
 let g:deoplete#popup_on_dot = 0
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#max_list = 10
+call g:deoplete#custom#option("max_list", 10)
 
 let g:deoplete#sources#rust#racer_binary = '/home/koen/.cargo/bin/racer'
 let g:deoplete#sources#rust#rust_source_path = '/home/koen/rust/src'
@@ -92,6 +106,9 @@ let g:deoplete#sources#rust#show_duplicates = 0
 
 let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm-7/lib/libclang.so'
 let g:deoplete#sources#clang#clang_header = '/usr/lib/llvm-7/lib/clang'
+
+let g:echodoc#enable_at_startup = 1
+let g:echodoc#type = 'virtual'
 
 let g:tex_flavor = 'latex'
 
@@ -127,6 +144,7 @@ map <C-l> <C-w>l
 
 " map sort function to leader+s
 vnoremap <leader>s :sort<CR>
+map <leader>s :w<CR>:!isort %<CR><CR>
 
 " make moving blocks of code easy
 vnoremap < <gv

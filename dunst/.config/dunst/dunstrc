@@ -1,10 +1,10 @@
 [global]
     alignment = center
     bounce_freq = 0
-    browser = /usr/bin/google-chrome
+    browser = /usr/bin/brave-browser
     dmenu = /usr/bin/rofi -show run -p dunst:
     follow = none
-    font = DejaVu Sans Mono for Powerline 9
+    font = Droid Sans Mono for Powerline 9
     format = "%a\n<b>%s</b>\n%b"
     frame_color = "#93a1a1"
     frame_width = 4

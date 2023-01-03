@@ -17,17 +17,18 @@ plugins=(
   zsh-syntax-highlighting
 )
 
-export BROWSER=google-chrome
+export BROWSER=brave-browser
 export EDITOR=nvim
-export JAVA_HOME=/usr/lib/jvm/java-8-oracle
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 export PYENV_ROOT=~/.pyenv
 export PATH=~/.cargo/bin:$PYENV_ROOT/bin:~/.local/bin:~/bin:/sbin:$PATH
 export PATH=/usr/local/sbin:/usr/sbin:/usr/local/cuda/bin:$PATH
+export PATH=/snap/bin:$PATH
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
-export TERMINAL=st
+export TERMINAL=alacritty
 export XDG_CONFIG_HOME=/home/koen/.config
 export ZSH=/home/koen/.oh-my-zsh
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 
 alias c="clear"
 alias cmpv="mpv --no-audio-display"
@@ -46,3 +47,7 @@ source $ZSH/oh-my-zsh.sh
 
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+eval "$(gh completion -s zsh)"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

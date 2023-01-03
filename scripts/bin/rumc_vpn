@@ -1,0 +1,3 @@
+#!/bin/bash
+
+f5fpc -s -x -t https://ravpn.radboudumc.nl:443 -u z179399
