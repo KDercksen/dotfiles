@@ -23,7 +23,11 @@ GNU Stow every folder depending on what is needed.
 
 Daily driver apps other than above (not included in this repository):
 - brave-browser (browser)
-- code (code editor)
+- vs code (code editor)
 - keepassxc (password manager)
 - eddie-ui (vpn)
 - docker
+- teams (work?)
+- git-lfs
+- github cli
+- cuda, nccl, cudnn etc
