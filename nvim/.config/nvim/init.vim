@@ -56,7 +56,6 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
 set autochdir
-set cc=80
 set clipboard=unnamed
 set completeopt=menuone,longest,preview
 set encoding=utf-8

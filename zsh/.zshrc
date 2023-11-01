@@ -29,6 +29,7 @@ export TERMINAL=alacritty
 export XDG_CONFIG_HOME=/home/koen/.config
 export ZSH=/home/koen/.oh-my-zsh
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+export TRANSFORMERS_CACHE=/mnt/storage/cache/
 
 alias c="clear"
 alias cmpv="mpv --no-audio-display"
@@ -51,3 +52,36 @@ eval "$(gh completion -s zsh)"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+
+# JINA_CLI_BEGIN
+
+## autocomplete
+if [[ ! -o interactive ]]; then
+    return
+fi
+
+compctl -K _jina jina
+
+_jina() {
+  local words completions
+  read -cA words
+
+  if [ "${#words}" -eq 2 ]; then
+    completions="$(jina commands)"
+  else
+    completions="$(jina completions ${words[2,-2]})"
+  fi
+
+  reply=(${(ps:
+:)completions})
+}
+
+# session-wise fix
+ulimit -n 4096
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
+# JINA_CLI_END
+
+
+

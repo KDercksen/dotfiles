@@ -8,5 +8,7 @@ xset +fp ~/.local/share/fonts
 xset fp rehash
 dunst -config $HOME/.config/dunst/dunstrc &
 export $(dbus-launch)
+eval "$(ssh-agent)"
+ssh-add ~/.ssh/github
 
 exec i3
