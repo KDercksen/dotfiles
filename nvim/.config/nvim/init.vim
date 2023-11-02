@@ -83,8 +83,8 @@ set whichwrap+=<,>,h,l
 let g:prettier#exec_cmd_path = '/home/koen/.config/nvim/plugged/vim-prettier/node_modules/.bin/prettier'
 let g:prettier#autoformat = 1
 
-let g:black_virtualenv = '/home/koen/.pyenv/versions/neovim3'
-let g:python3_host_prog = '/home/koen/.pyenv/versions/neovim3/bin/python'
+let g:black_virtualenv = '/home/koen/.pyenv/versions/3.12.0'
+let g:python3_host_prog = '/home/koen/.pyenv/versions/3.12.0/bin/python'
 
 let g:neomake_python_enabled_makers = ['flake8', 'mypy']
 

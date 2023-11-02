@@ -1,0 +1,13 @@
+import = ["/home/koen/.config/alacritty/tokyo-night.toml"]
+
+[font]
+size = 10.0
+
+[font.normal]
+family = "Droid Sans Mono for Powerline"
+style = "Regular"
+
+[window]
+# decorations = "none"
+dynamic_padding = true
+opacity = 0.9

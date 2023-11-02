@@ -30,6 +30,7 @@ export XDG_CONFIG_HOME=/home/koen/.config
 export ZSH=/home/koen/.oh-my-zsh
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 export TRANSFORMERS_CACHE=/mnt/storage/cache/
+export TMPDIR=/home/koen/tmp
 
 alias c="clear"
 alias cmpv="mpv --no-audio-display"
@@ -85,3 +86,4 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 
 
+fpath+=${ZDOTDIR:-~}/.zsh_functions

@@ -37,7 +37,7 @@
 	process = git-lfs filter-process
 	required = true
 [gpg]
-	program = gpg2
+	program = gpg
 [merge]
 	tool = vimdiff3
 [mergetool]
