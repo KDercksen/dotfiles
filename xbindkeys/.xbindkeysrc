@@ -1,0 +1,5 @@
+"xdotool key Ctrl+Shift+V"
+button9
+
+"xdotool key Ctrl+C"
+button8

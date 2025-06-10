@@ -19,17 +19,20 @@ plugins=(
 
 export BROWSER=brave-browser
 export EDITOR=nvim
+export DOCKER_HOST=unix:///run/user/1000/docker.sock
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 export PYENV_ROOT=~/.pyenv
 export PATH=~/.cargo/bin:$PYENV_ROOT/bin:~/.local/bin:~/bin:/sbin:$PATH
 export PATH=/usr/local/sbin:/usr/sbin:/usr/local/cuda/bin:$PATH
 export PATH=/snap/bin:$PATH
+export PATH=/usr/local/lib/nodejs/bin:$PATH
+export PATH=~/downloads/zig-linux-x86_64-0.15.0-dev.471+369177f0b:$PATH
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 export TERMINAL=alacritty
 export XDG_CONFIG_HOME=/home/koen/.config
 export ZSH=/home/koen/.oh-my-zsh
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
-export TRANSFORMERS_CACHE=/mnt/storage/cache/
+export JAVA_HOME=/usr/lib/jvm/default-java
+export HF_HOME=/mnt/storage/cache/
 export TMPDIR=/home/koen/tmp
 
 alias c="clear"
@@ -83,7 +86,14 @@ ulimit -n 4096
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 # JINA_CLI_END
-
-
-
 fpath+=${ZDOTDIR:-~}/.zsh_functions
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform
+
+source ~/.rvm/scripts/rvm
+
+# add Pulumi to the PATH
+export PATH=$PATH:/home/koen/.pulumi/bin
+
+[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
