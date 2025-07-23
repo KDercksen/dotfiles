@@ -1,9 +1,0 @@
-[Desktop Entry]
-Encoding=UTF-8
-Version=1.0
-Type=Application
-NoDisplay=false
-Terminal=true
-Exec=/snap/bin/nvim %f
-Name=nvim
-Comment=Custom definition for nvim

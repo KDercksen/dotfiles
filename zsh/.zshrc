@@ -97,3 +97,5 @@ source ~/.rvm/scripts/rvm
 export PATH=$PATH:/home/koen/.pulumi/bin
 
 [[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
+export PATH="/home/koen/.config/herd-lite/bin:$PATH"
+export PHP_INI_SCAN_DIR="/home/koen/.config/herd-lite/bin:$PHP_INI_SCAN_DIR"
