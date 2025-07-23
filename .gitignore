@@ -1,6 +1,1 @@
 *.pyc
-vim/.vim/bundle/*
-email/.mutt/aliases
-!vim/.vim/bundle/Vundle.vim
-nvim/.config/nvim/*
-!nvim/.config/nvim/init.vim
