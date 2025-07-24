@@ -4,7 +4,7 @@ import = ["/home/koen/.config/alacritty/tokyo-night.toml"]
 size = 10.0
 
 [font.normal]
-family = "Droid Sans Mono for Powerline"
+family = "RobotoMono Nerd Font"
 style = "Regular"
 
 [window]
