@@ -17,7 +17,7 @@ plugins=(
   zsh-syntax-highlighting
 )
 
-export BROWSER=brave-browser
+export BROWSER=google-chrome-stable
 export EDITOR=nvim
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
