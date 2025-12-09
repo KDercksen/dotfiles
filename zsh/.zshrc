@@ -47,6 +47,7 @@ alias tag="ctags -R ."
 alias update="sudo apt update"
 alias upgrade="sudo apt full-upgrade"
 alias v=nvim
+alias fix-gpg="gpg-connect-agent 'scd serialno' 'learn --force' /bye"
 
 source $ZSH/oh-my-zsh.sh
 
