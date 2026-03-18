@@ -18,7 +18,7 @@ plugins=(
 )
 
 export BROWSER=google-chrome-stable
-export EDITOR=nvim
+export EDITOR=~/bin/nvim-linux-x86_64.appimage
 export DOCKER_HOST=unix:///run/user/1000/docker.sock
 export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 export PYENV_ROOT=~/.pyenv
@@ -46,6 +46,7 @@ alias ra=ranger
 alias tag="ctags -R ."
 alias update="sudo apt update"
 alias upgrade="sudo apt full-upgrade"
+alias nvim=~/bin/nvim-linux-x86_64.appimage
 alias v=nvim
 alias fix-gpg="gpg-connect-agent 'scd serialno' 'learn --force' /bye"
 
