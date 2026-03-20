@@ -39,5 +39,7 @@
     "superpowers@claude-plugins-official": true,
     "feature-dev@claude-plugins-official": true,
     "commit-commands@claude-plugins-official": true
-  }
+  },
+  "voiceEnabled": false,
+  "skipDangerousModePermissionPrompt": true
 }
