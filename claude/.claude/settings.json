@@ -14,7 +14,7 @@
           {
             "type": "command",
             "command": "printf '\\a' > $(/usr/bin/tmux display-message -p '#{pane_tty}')",
-            "timeout": 5
+            "timeout": 1
           }
         ]
       }
@@ -40,6 +40,6 @@
     "feature-dev@claude-plugins-official": true,
     "commit-commands@claude-plugins-official": true
   },
-  "voiceEnabled": false,
+  "voiceEnabled": true,
   "skipDangerousModePermissionPrompt": true
 }
